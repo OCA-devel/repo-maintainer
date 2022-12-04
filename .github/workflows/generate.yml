@@ -3,7 +3,7 @@ name: Generate
 on:
   push:
     branches:
-      - "master2"
+      - "master"
 jobs:
   test:
     runs-on: ubuntu-latest

@@ -54,8 +54,6 @@ gh = github3.login(token=token)
 gh_org = gh.organization(org)
 repositories = gh_org.repositories()
 repo_keys = [repo.name for repo in repositories]
-gh_admin_team = gh_org.team_by_name(admin_team)
-gh_maintainer_teams = [gh_org.team_by_name(maintainer_team) for maintainer_team in maintainer_teams]
 for team, data in psc_data.items():
     _logger.info("Generating team %s" % team)
     try:
@@ -90,6 +88,8 @@ for team, data in psc_data.items():
             _logger.info("Adding membership to %s" % member)
             gh_team.add_or_update_membership(member, role="maintainer")
 team_repos = {}
+gh_admin_team = gh_org.team_by_name(admin_team)
+gh_maintainer_teams = [gh_org.team_by_name(maintainer_team) for maintainer_team in maintainer_teams]
 for repo, repo_data in repositories_data.items():
     if repo not in repo_keys:
         gh_repo = gh_org.create_repository(
