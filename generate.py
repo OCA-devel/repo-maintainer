@@ -40,7 +40,7 @@ org = sys.argv[1]
 token = sys.argv[2]
 version = sys.argv[3]
 admin_team = sys.argv[4]
-maintainer_teams = ["core-maintainers"]
+maintainer_teams = ["core"]
 # maintainer_teams = []
 new_repo_template = "git+https://github.com/OCA/oca-addons-repo-template"
 

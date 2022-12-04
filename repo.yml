@@ -1,16 +1,16 @@
 .github:
   maintainers: []
   name: null
-  psc: core-maintainers
+  psc: core
 account-analytic:
   maintainers: []
   name: Odoo Account Analytic Related Addons
-  psc: accounting-maintainers
+  psc: accounting
 account-budgeting:
   maintainers: []
   name: null
-  psc: accounting-maintainers
+  psc: accounting
 wms:
   maintainers: []
   name: Warehouse Management System for advance logistic with Odoo
-  psc: logistics-maintainers
+  psc: logistics
