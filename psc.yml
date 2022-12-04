@@ -1,15 +1,18 @@
 accounting:
   members:
   - etobella
+  - sbidoul
   representatives: []
   name: Accounting
 core:
   members: 
   - etobella
+  - simahawk
   representatives: []
 logistics:
   members:
   - etobella
+  - bguillot
   representatives:
   - etobella
   name: Logistics
