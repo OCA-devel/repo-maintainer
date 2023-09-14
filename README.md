@@ -7,21 +7,15 @@
 
 <!-- /!\ do not modify above this line -->
 
-# hola
+# Team maintainer
 
-None
+This repo allows us to add maitnainers and repos in a more easy way.
 
-<!-- /!\ do not modify below this line -->
+Creation, adding permisions and revokation is done automatically by the script.
 
-<!-- prettier-ignore-start -->
+## I can use it on my own organizaytion?
 
-[//]: # (addons)
-
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
-
-[//]: # (end addons)
-
-<!-- prettier-ignore-end -->
+Yes, you can. You just add the repo on your organization, add a secret called ORG_TOKEN on you secrets and modify the secrets with your information.
 
 ## Licenses
 
