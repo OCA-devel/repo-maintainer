@@ -5,21 +5,21 @@ accounting:
   representatives: []
   name: Accounting
 core:
-  members: 
-  - etobella
-  - simahawk
+  members:
+    - etobella
+    - simahawk
   representatives: []
 logistics:
   members:
-  - etobella
-  - bguillot
+    - etobella
+    - bguillot
   representatives:
-  - etobella
+    - etobella
   name: Logistics
 board:
   members:
-  - etobella
-  - simahawh
+    - etobella
+    - simahawh
   representatives:
-  - etobella
+    - etobella
   name: Board
