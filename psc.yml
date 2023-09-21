@@ -16,3 +16,10 @@ logistics:
   representatives:
   - etobella
   name: Logistics
+board:
+  members:
+  - etobella
+  - simahawh
+  representatives:
+  - etobella
+  name: Board
