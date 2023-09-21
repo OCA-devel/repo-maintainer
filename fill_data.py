@@ -37,7 +37,11 @@ for repo in oca.repositories():
                 break
     except github3.exceptions.NotFoundError:
         pass
-    repos_data[repo.name] = {"name": repo.description, "psc": psc, "branches": [b.name for b in repo.branches()]}
+    repos_data[repo.name] = {
+        "name": repo.description,
+        "psc": psc,
+        "branches": [b.name for b in repo.branches()],
+    }
 
 with open("repo.yml", "w") as f:
     yaml.dump(repos_data, f)
