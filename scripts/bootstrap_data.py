@@ -23,7 +23,7 @@ for team in teams:
     teams_data[team.slug] = team_data
 
 
-with open("psc.yml", "w") as f:
+with open("../psc.yml", "w") as f:
     yaml.dump(teams_data, f)
 
 
@@ -43,5 +43,5 @@ for repo in oca.repositories():
         "branches": [b.name for b in repo.branches()],
     }
 
-with open("repo.yml", "w") as f:
+with open("../repo.yml", "w") as f:
     yaml.dump(repos_data, f)

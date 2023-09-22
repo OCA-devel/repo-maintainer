@@ -111,13 +111,13 @@ org = sys.argv[1]
 token = sys.argv[2]
 
 
-with open("conf.yml", "r") as f:
+with open("../conf.yml", "r") as f:
     conf_data = yaml.safe_load(f.read())
 
-with open("psc.yml", "r") as f:
+with open("../psc.yml", "r") as f:
     psc_data = yaml.safe_load(f.read())
 
-with open("repo.yml", "r") as f:
+with open("../repo.yml", "r") as f:
     repositories_data = yaml.safe_load(f.read())
 
 new_repo_template = conf_data.get("template")
