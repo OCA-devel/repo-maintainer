@@ -19,4 +19,4 @@ jobs:
       - name: Generate all
         run:
           oca-team-maintainer --org $GITHUB_REPOSITORY_OWNER --token ${{
-          secrets.ORG_TOKEN }} --folder .
+          secrets.ORG_TOKEN }} --folder ./conf
