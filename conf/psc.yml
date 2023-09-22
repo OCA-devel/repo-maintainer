@@ -5,6 +5,7 @@ accounting:
   representatives: []
   name: Accounting
 core:
+  name: Core
   members:
     - etobella
     - simahawk
