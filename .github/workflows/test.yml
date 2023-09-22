@@ -1,0 +1,37 @@
+name: Test package code
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - PYTHON_VERSION: "3.8"
+            os: ubuntu-latest
+          - PYTHON_VERSION: "3.9"
+            os: ubuntu-latest
+          - PYTHON_VERSION: "3.10"
+            os: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{matrix.PYTHON_VERSION}}
+      - name: Configure TOX
+        run: |
+          pip install pip --upgrade
+          pip install tox codecov tox-gh-actions wheel
+      - name: Generate Report
+        run: |
+          pip install coverage
+          pip install .[test]
+          coverage run -m unittest
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v3

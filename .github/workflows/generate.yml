@@ -15,7 +15,8 @@ jobs:
         with:
           python-version: "3.9"
       - name: Install requirements
-        run: python -m pip install -r requirements.txt
+        run: python -m pip install .
       - name: Generate all
         run:
-          python scripts/generate.py $GITHUB_REPOSITORY_OWNER ${{ secrets.ORG_TOKEN }}
+          oca-team-maintainer --org $GITHUB_REPOSITORY_OWNER --token ${{
+          secrets.ORG_TOKEN }} --folder .

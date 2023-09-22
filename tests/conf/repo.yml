@@ -1,0 +1,12 @@
+repo1:
+  maintainers: []
+  name: Repository 1
+  psc: team1
+  branches:
+    - "16.0"
+repo2:
+  maintainers: [user3]
+  name: Repository 2
+  psc: team2
+  branches:
+    - "12.0"
