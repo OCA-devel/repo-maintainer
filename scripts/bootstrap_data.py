@@ -12,12 +12,18 @@ TOKEN = ""  # Fill this with your token
 gh = github3.login(token=TOKEN)
 
 oca = gh.organization("OCA")
+
+
+def safe_name(name):
+    return name or " ".join([x.capitalize() for x in name.splt("-")])
+
+
 teams = oca.teams()
 teams_data = {}
 for team in teams:
     if team.slug in ["oca-contributors", "oca-members"]:
         continue
-    team_data = {"name": team.name, "representatives": [], "members": []}
+    team_data = {"name": safe_name(team.name), "representatives": [], "members": []}
     for member in team.members(role="member"):
         if member.login in ["oca-travis", "oca-transbot", "OCA-git-bot"]:
             continue
@@ -43,8 +49,9 @@ for repo in oca.repositories():
                 break
     except github3.exceptions.NotFoundError:
         pass
+    name = safe_name(repo.description)
     repos_data[repo.name] = {
-        "name": repo.description,
+        "name": name,
         "psc": psc,
         "branches": [b.name for b in repo.branches()],
     }

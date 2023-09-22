@@ -22,7 +22,7 @@ account-analytic:
     - "16.0"
 account-budgeting:
   maintainers: []
-  name: null
+  name: Account budgeting
   psc: accounting
   branches:
     - "14.0"
