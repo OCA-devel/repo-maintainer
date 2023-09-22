@@ -2,3 +2,5 @@ copier
 github3.py
 PyYAML
 click
+sphinx
+sphinx-rtd-theme

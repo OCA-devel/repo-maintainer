@@ -31,8 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Generate pages
+      - name: Requirment
+        run: pip install -r requirements.txt
+      - name: Generate RST
         run: python scripts/gh_pages.py
+      - name: Generate docs
+        run: python -m sphinx -W docsource docs
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
