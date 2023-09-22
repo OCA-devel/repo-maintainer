@@ -1,3 +1,9 @@
+"""Script to bootstrap configuration files.
+
+You must run this once to generate configuration files
+out of existing OCA repos.
+"""
+
 import github3
 import yaml
 
@@ -23,7 +29,7 @@ for team in teams:
     teams_data[team.slug] = team_data
 
 
-with open("psc.yml", "w") as f:
+with open("../conf/psc.yml", "w") as f:
     yaml.dump(teams_data, f)
 
 
@@ -43,5 +49,5 @@ for repo in oca.repositories():
         "branches": [b.name for b in repo.branches()],
     }
 
-with open("repo.yml", "w") as f:
+with open("../conf/repo.yml", "w") as f:
     yaml.dump(repos_data, f)

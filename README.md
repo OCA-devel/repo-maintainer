@@ -11,11 +11,18 @@
 
 This repo allows us to add maitnainers and repos in a more easy way.
 
-Creation, adding permisions and revokation is done automatically by the script.
+Creation, adding permissions and revokation is done automatically by the script.
 
-## I can use it on my own organizaytion?
+## I can use it on my own organization?
 
 Yes, you can. You just add the repo on your organization, add a secret called ORG_TOKEN on you secrets and modify the secrets with your information.
+
+
+## Bootstrap
+
+Config files are located in `conf` folder in this project.
+To define the config of your repo edit files there.
+Alternatively, you can use the script `scripts/bootstrap_data.py` to generate the conf out of existing repos.
 
 ## Licenses
 
