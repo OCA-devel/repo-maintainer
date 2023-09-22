@@ -1,0 +1,11 @@
+team1:
+  members:
+    - user1
+  representatives: []
+  name: Team 01
+team2:
+  members:
+    - user1
+    - user2
+  representatives: []
+  name: Team 02
