@@ -7,8 +7,9 @@ from subprocess import CalledProcessError
 
 import copier
 import github3
-import yaml
 from github3.exceptions import NotFoundError
+
+from . import utils
 
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.INFO)
@@ -110,15 +111,9 @@ def create_branch(repo, version):
 org = sys.argv[1]
 token = sys.argv[2]
 
-
-with open("../conf/global.yml", "r") as f:
-    conf_data = yaml.safe_load(f.read())
-
-with open("../conf/psc.yml", "r") as f:
-    psc_data = yaml.safe_load(f.read())
-
-with open("../conf/repo.yml", "r") as f:
-    repositories_data = yaml.safe_load(f.read())
+conf_data = utils.get_global_conf()
+psc_data = utils.get_psc_conf()
+repositories_data = utils.get_repo_conf()
 
 new_repo_template = conf_data.get("template")
 gh = github3.login(token=token)
