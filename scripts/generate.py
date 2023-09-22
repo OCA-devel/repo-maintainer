@@ -7,9 +7,8 @@ from subprocess import CalledProcessError
 
 import copier
 import github3
+import utils
 from github3.exceptions import NotFoundError
-
-from . import utils
 
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.INFO)
