@@ -1,3 +1,9 @@
+"""Script to bootstrap configuration files.
+
+You must run this once to generate configuration files
+out of existing OCA repos.
+"""
+
 import github3
 import yaml
 
