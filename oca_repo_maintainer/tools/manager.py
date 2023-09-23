@@ -84,18 +84,7 @@ class RepoManager:
                 ["git", "init"],
                 cwd=clone_dir,
             )
-            gh_user = self.gh.me()
-            check_call(
-                ["git", "config", "user.name", gh_user.name or gh_user.login],
-                cwd=clone_dir,
-            )
-            email = gh_user.email
-            if not email:
-                for gh_mail in self.gh.emails():
-                    if gh_mail.primary:
-                        email = gh_mail.email
-                        break
-            check_call(["git", "config", "user.email", email], cwd=clone_dir)
+            self._setup_user(clone_dir)
             check_call(
                 ["git", "add", "-A"],
                 cwd=clone_dir,
@@ -133,6 +122,28 @@ class RepoManager:
             raise
         finally:
             shutil.rmtree(clone_dir)
+
+    def _setup_user(self, clone_dir):
+        """Ensure user is properly configured on current repo."""
+        gh_user = self.gh.me()
+        try:
+            name = subprocess.check_output("git config user.name".split(" ")).strip()
+        except CalledProcessError:
+            name = None
+        if not name:
+            check_call(
+                ["git", "config", "user.name", gh_user.name or gh_user.login],
+                cwd=clone_dir,
+            )
+        try:
+            email = subprocess.check_output("git config user.email".split(" ")).strip()
+        except CalledProcessError:
+            email = None
+        if not email:
+            check_call(
+                ["git", "config", "user.name", gh_user.name or gh_user.login],
+                cwd=clone_dir,
+            )
 
     def _process_psc(self):
         for team, data in self.psc_data.items():
