@@ -6,15 +6,9 @@
 """Script to generate gh pages
 """
 
-import logging
 from pathlib import Path
 
-import utils
-
-_logger = logging.getLogger("gh_pages")
-
-OUTPUT = Path("docsource/index.rst")
-PAGE_FOLDER = Path("docsource")
+import yaml
 
 INDEX_HEADER = """
 OCA repositories
@@ -23,14 +17,20 @@ OCA repositories
 
 
 class GHPageGenerator:
-    def __init__(self):
-        self.output_path = OUTPUT
-        self.page_folder = PAGE_FOLDER
-        self.global_conf = utils.get_global_conf()
-        self.psc_conf = utils.get_psc_conf()
-        self.repo_conf = utils.get_repo_conf()
+    def __init__(self, conf_dir, org, page_folder):
+        self.conf_dir = conf_dir
+        self.org = org
+        with open("%s/global.yml" % self.conf_dir, "r") as f:
+            self.global_conf = yaml.safe_load(f.read())
 
-    def generate(self):
+        with open("%s/psc.yml" % self.conf_dir, "r") as f:
+            self.psc_conf = yaml.safe_load(f.read())
+
+        with open("%s/repo.yml" % self.conf_dir, "r") as f:
+            self.repo_conf = yaml.safe_load(f.read())
+        self.page_folder = page_folder
+
+    def run(self):
         # repo_index = self._generate_repo_index()
         # self.write(repo_index)
         self._generate_psc_page()
@@ -95,12 +95,6 @@ class GHPageGenerator:
     def _link_users(self, *users):
         return [f"`{x} <https://github.com/{x}>`_" for x in users]
 
-    def write(self, content, path=None):
-        path = path or self.output_path
+    def write(self, content, path):
         with path.open("w") as fd:
             fd.write(content)
-
-
-if __name__ == "__main__":
-    generator = GHPageGenerator()
-    generator.generate()

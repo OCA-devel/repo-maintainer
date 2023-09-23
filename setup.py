@@ -7,7 +7,14 @@
 
 from setuptools import setup
 
-install_requires = ["copier", "github3.py", "PyYAML", "click"]
+install_requires = [
+    "copier",
+    "github3.py",
+    "PyYAML",
+    "click",
+    "sphinx",
+    "sphinx-rtd-theme",
+]
 
 tests_require = ["unitest"]
 
@@ -52,6 +59,7 @@ setup(
     entry_points={
         "console_scripts": [
             "oca-repo-manage = oca_repo_maintainer.cli.manage:manage",
+            "oca-repo-pages = oca_repo_maintainer.cli.pages:pages",
         ]
     },
 )
