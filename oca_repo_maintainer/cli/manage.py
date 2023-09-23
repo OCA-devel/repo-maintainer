@@ -7,7 +7,11 @@ from ..tools.manager import RepoManager
 @click.option("--conf-dir", required=True, help="Folder where configuration is stored")
 @click.option("--token", required=True, prompt="Your github token")
 @click.option(
-    "--org", default="OCA", prompt="Your organization", help="The organizattion."
+    # FIXME: switch to OCA when ready
+    "--org",
+    default="OCA-devel",
+    prompt="Your organization",
+    help="The organizattion.",
 )
 def manage(conf_dir, org, token):
     RepoManager(conf_dir, org, token).run()
