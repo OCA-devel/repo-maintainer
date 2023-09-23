@@ -15,10 +15,18 @@ tests_require = ["unitest"]
 setup(
     name="oca_repo_maintainer",
     version="0.0.1",
-    description="Manage your Teams in Github",
-    long_description="Manage your Teams in Github",
+    description="Manage repositories and teams on Github",
+    long_description="""
+    Manage repos and teams via YAML configuration.
+    This tool is able to:
+
+    * create/update repositories
+    * create/update teams and roles
+    * create/update branches
+
+    """,
     author="Odoo Community Association",
-    url="http://github.com/OCA/team-maintainer",
+    url="http://github.com/OCA/repo-maintainer",
     install_requires=install_requires,
     tests_require=tests_require,
     extras_require={"test": tests_require},

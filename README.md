@@ -1,17 +1,20 @@
 
-[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/hola&target_branch=16.0)
-[![Pre-commit Status](https://github.com/OCA/hola/actions/workflows/pre-commit.yml/badge.svg?branch=16.0)](https://github.com/OCA/hola/actions/workflows/pre-commit.yml?query=branch%3A16.0)
-[![Build Status](https://github.com/OCA/hola/actions/workflows/test.yml/badge.svg?branch=16.0)](https://github.com/OCA/hola/actions/workflows/test.yml?query=branch%3A16.0)
-[![codecov](https://codecov.io/gh/OCA/hola/branch/16.0/graph/badge.svg)](https://codecov.io/gh/OCA/hola)
-[![Translation Status](https://translation.odoo-community.org/widgets/hola-16-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/hola-16-0/?utm_source=widget)
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA-devel/repo-maintainer&target_branch=16.0)
+[![Pre-commit Status](https://github.com/OCA-devel/repo-maintainer/actions/workflows/pre-commit.yml/badge.svg?branch=16.0)](https://github.com/OCA-devel/repo-maintainer/actions/workflows/pre-commit.yml?query=branch%3A16.0)
+[![Build Status](https://github.com/OCA-devel/repo-maintainer/actions/workflows/test.yml/badge.svg?branch=16.0)](https://github.com/OCA-devel/repo-maintainer/actions/workflows/test.yml?query=branch%3A16.0)
+[![codecov](https://codecov.io/gh/OCA-devel/repo-maintainer/branch/16.0/graph/badge.svg)](https://codecov.io/gh/OCA-devel/repo-maintainer)
+[![Translation Status](https://translation.odoo-community.org/widgets/repo-maintainer-16-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/repo-maintainer-16-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
 
-# Team maintainer
+# Repo maintainer
 
-This repo allows us to add maitnainers and repos in a more easy way.
+This tool allows to manage repositories and teams via via YAML configuration.
+Features:
 
-Creation, adding permissions and revokation is done automatically by the script.
+* create/update repositories
+* create/update teams and roles
+* create/update branches
 
 ## I can use it on my own organization?
 
@@ -27,10 +30,6 @@ Alternatively, you can use the script `scripts/bootstrap_data.py` to generate th
 ## Licenses
 
 This repository is licensed under [AGPL-3.0](LICENSE).
-
-However, each module can have a totally different license, as long as they adhere to Odoo Community Association (OCA)
-policy. Consult each module's `__manifest__.py` file, which contains a `license` key
-that explains its license.
 
 ----
 OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit
