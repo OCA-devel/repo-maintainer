@@ -46,6 +46,8 @@ with open("../conf/psc.yml", "w") as f:
 
 repos_data = {}
 for repo in oca.repositories():
+    if repo.name == ".github":
+        continue
     psc = "board"
     try:
         for team in repo.teams():
