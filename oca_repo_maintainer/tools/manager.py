@@ -1,3 +1,10 @@
+# Copyright 2023 Dixmit
+# @author: Enric Tobella
+# Copyright 2023 Camptocamp SA
+# @author: Simone Orsi
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+
+
 import logging
 import shutil
 import subprocess

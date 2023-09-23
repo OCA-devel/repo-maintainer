@@ -1,3 +1,10 @@
+# Copyright 2023 Dixmit
+# @author: Enric Tobella
+# Copyright 2023 Camptocamp SA
+# @author: Simone Orsi
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+
+
 from setuptools import setup
 
 install_requires = ["copier", "github3.py", "PyYAML", "click"]
@@ -18,7 +25,7 @@ setup(
     # package_dir={"": ""},
     packages=["oca_repo_maintainer", "oca_repo_maintainer.tools"],
     include_package_data=True,
-    license="LGPL-3",
+    license="AGPL-3",
     classifiers=[
         "Development Status :: 4 - Beta",
         "License :: OSI Approved :: GNU Affero General Public License v3",
