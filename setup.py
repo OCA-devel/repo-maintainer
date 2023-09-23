@@ -6,7 +6,7 @@ tests_require = ["unitest"]
 
 
 setup(
-    name="oca_team_maintainer",
+    name="oca_repo_maintainer",
     version="0.0.1",
     description="Manage your Teams in Github",
     long_description="Manage your Teams in Github",
@@ -16,7 +16,7 @@ setup(
     tests_require=tests_require,
     extras_require={"test": tests_require},
     # package_dir={"": ""},
-    packages=["oca_team_maintainer", "oca_team_maintainer.tools"],
+    packages=["oca_repo_maintainer", "oca_repo_maintainer.tools"],
     include_package_data=True,
     license="LGPL-3",
     classifiers=[
@@ -32,7 +32,7 @@ setup(
     zip_safe=False,
     entry_points={
         "console_scripts": [
-            "oca-team-maintainer = oca_team_maintainer.tools.generate:generate",
+            "oca-repo-manage = oca_repo_maintainer.cli.manage:manage",
         ]
     },
 )

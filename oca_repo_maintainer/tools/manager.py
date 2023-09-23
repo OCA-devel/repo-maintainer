@@ -38,21 +38,23 @@ def check_call(cmd, cwd, log_error=True, extra_cmd_args=False, env=None):
     cp.check_returncode()
 
 
-class OcaTeamMaintainer:
-    def __init__(self, folder, org, token, test=False):
+class RepoManager:
+    """Setup and update repositories and teams."""
+
+    def __init__(self, conf_dir, org, token, test=False):
         self.test = test
-        self.folder = folder
+        self.conf_dir = conf_dir
         self.token = token
         self.org = org
         self.gh = github3.login(token=token)
         self.gh_org = self.gh.organization(org)
-        with open("%s/global.yml" % self.folder, "r") as f:
+        with open("%s/global.yml" % self.conf_dir, "r") as f:
             self.conf_data = yaml.safe_load(f.read())
 
-        with open("%s/psc.yml" % self.folder, "r") as f:
+        with open("%s/psc.yml" % self.conf_dir, "r") as f:
             self.psc_data = yaml.safe_load(f.read())
 
-        with open("%s/repo.yml" % self.folder, "r") as f:
+        with open("%s/repo.yml" % self.conf_dir, "r") as f:
             self.repositories_data = yaml.safe_load(f.read())
         self.new_repo_template = self.conf_data.get("template")
 
@@ -197,6 +199,6 @@ class OcaTeamMaintainer:
                 if str(branch) not in repo_branches:
                     self.create_branch(repo, gh_repo, str(branch))
 
-    def __call__(self):
+    def run(self):
         self._process_psc()
         self._process_org()
