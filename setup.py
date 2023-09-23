@@ -31,7 +31,11 @@ setup(
     tests_require=tests_require,
     extras_require={"test": tests_require},
     # package_dir={"": ""},
-    packages=["oca_repo_maintainer", "oca_repo_maintainer.tools"],
+    packages=[
+        "oca_repo_maintainer",
+        "oca_repo_maintainer.cli",
+        "oca_repo_maintainer.tools",
+    ],
     include_package_data=True,
     license="AGPL-3",
     classifiers=[
