@@ -5,7 +5,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 import json
-from unittest import TestCase
+from unittest import TestCase, mock
 
 from oca_repo_maintainer.tools.manager import RepoManager
 
@@ -160,3 +160,6 @@ class TestManager(TestCase):
                 self.assertEqual(getattr(req, k), expected[k])
             if expected.get("body"):
                 self.assertEqual(json.loads(req.body), expected["body"])
+        with vcr.use_cassette("process_repositories") as cassette:
+            with mock.patch.object(RepoManager, "push_branch"):
+                self.manager._process_repositories()

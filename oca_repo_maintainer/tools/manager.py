@@ -214,12 +214,15 @@ class RepoManager:
                 ],
                 cwd=clone_dir,
             )
-            check_call(
-                ["git", "push", "origin", "HEAD"],
-                cwd=clone_dir,
-            )
+            self.push_branch(clone_dir)
         except CalledProcessError:
             _logger.error("Something failed when the new repo was being created")
             raise
         finally:
             shutil.rmtree(clone_dir)
+
+    def push_branch(self, clone_dir):
+        check_call(
+            ["git", "push", "origin", "HEAD"],
+            cwd=clone_dir,
+        )

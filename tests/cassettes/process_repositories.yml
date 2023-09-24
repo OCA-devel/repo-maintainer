@@ -1,0 +1,1361 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/orgs/OCA-devel/repos?per_page=100
+    response:
+      body:
+        string: !!binary |
+          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
+          ZH4AAA==
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:41 GMT
+        ETag:
+          - W/"da06bd02fa32eb61e44232f6fb1cf80b7841cdcd5f48bcdf8b68be053653a13c"
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BE67F:2645E60:65102741
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4999"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "1"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/orgs/OCA-devel/teams/board
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA61UTW/bMAz9Lzon9QeyJhEwDG13zwb0tIsgy4qjRZYMUXaRBfnvoxwlU9qhyYrd
+          LIrvyXx85J4Y3kpCSWW5q8mEqJrQeb5YLhbzCTG2lixEyDPbvnxdPe6+fXoUs4fqab7GXNB9k0Br
+          CcKpzitrMIr3nVMDFzs8CG1BBnpjvVorwUMSA+m9MoEiDQOThld6TO+dxtuN9x3QLOOdumuU3/TV
+          nbBtZl3Djfo1ckFWFMv5cpGXReYlb7NYA3JsfKvZJdElCWSrp4dpLQepRyxkJzFa2VbSwSv0B34j
+          i0z7+HHA/3Kys6C8dUr+jxdGuiC6dK0CODah67XGmHCSe1kz7lHNMi/LaVFO89lzMaN5ScvyR5C6
+          q6/mnPQQtjdIVcYiWDzfT0jaE0L3RNtGBTecFcaXgqHO3UpNtmLbJprs+w3NT/p2kvNqp9JenxTD
+          xht/vQUp9AjBVzfWbv8NOiKCCgD9DY1PXz1CEHurL1PwXxzY9ZVWgn2E7RKa2poP3HP3uhFjEOL0
+          9iCdsMaj7OMg93+G98vweYYFXqwSgyYOerFBOlweuBjommuQqD4HljqOdc7+lMIDod71MeE8Z7s3
+          17GKoxEo2jcGGgWBI5+QtdXavuAOSE7jysK79xdL6vj35i+nxf2V+SuWdLYMOdyJjRriIB9l8bsu
+          rO9VsgvJAQvhDtUlNCQdfgMWawnA5QUAAA==
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:41 GMT
+        ETag:
+          - W/"9ec61d43e857cecd06665d6cbe93bb723f155828154a09ddf79fac76e56256b1"
+        Last-Modified:
+          - Sun, 04 Dec 2022 14:02:22 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BE770:2645F56:65102741
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4998"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "2"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body:
+        '{"name": "test-repo-1", "description": "test-repo-1", "homepage": "",
+        "private": false, "has_issues": true, "has_wiki": true, "license_template": "",
+        "auto_init": false, "gitignore_template": "", "has_projects": true, "team_id":
+        7089887}'
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "237"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: POST
+      uri: https://api.github.com/orgs/OCA-devel/repos
+    response:
+      body:
+        string: '{"id":695845928,"node_id":"R_kgDOKXnEKA","name":"test-repo-1","full_name":"OCA-devel/test-repo-1","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-1","description":"test-repo-1","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-1","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-1/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-1/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-1/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-1/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-1/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-1/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-1/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-1/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-1/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-1/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-1/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-1/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-1/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-1/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/deployments","created_at":"2023-09-24T12:10:42Z","updated_at":"2023-09-24T12:10:42Z","pushed_at":"2023-09-24T12:10:42Z","git_url":"git://github.com/OCA-devel/test-repo-1.git","ssh_url":"git@github.com:OCA-devel/test-repo-1.git","clone_url":"https://github.com/OCA-devel/test-repo-1.git","svn_url":"https://github.com/OCA-devel/test-repo-1","homepage":"","size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"network_count":0,"subscribers_count":0}'
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Length:
+          - "6437"
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:42 GMT
+        ETag:
+          - '"91d08878c0c20e4735000d4b825e16cd9535b422c6b9fff814f56ddadb828191"'
+        Location:
+          - https://api.github.com/repos/OCA-devel/test-repo-1
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - public_repo, repo
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BE841:264601E:65102741
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4997"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "3"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 201
+        message: Created
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/orgs/OCA-devel/teams/test-team-1
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA61UTY/aMBD9Lz6TzQfpsrFUVbvtoTdaiVMvlnFMcHHiyONkRRH/veMQqGFRoate
+          EBnPPHveezM70vBaEkqcBBc5yesoJROiSkKfHqfJbFpMSGNKyXyELNjm9cv8Zfvtw4vIn6vZ1wXm
+          gu6qNwClBGFV65RpCG06rSektarnYoupQhuQJZY2xqmVEtynMZDOqcZDhWFgsuFLPaR3VuPp2rkW
+          aBzzVj1Uyq275YMwdWxsxRv1a8CCOE2LWfGUZGnse4rHXhBj7WrNzoHOQSCef36OStlLPdQC/obU
+          1LJeSgsXGO94TDwi7cY/e3ydla0B5YxV8n/cMMAhbCttrQAGMUiLamBMWMmdLBl3GMuSbBolRZTl
+          izSh04xO8x+e8La8mXPkQ5iuQah0bIKN38mEhMoQuiPaVMo/5MQz3uTtddIstNycbarRct/vsECg
+          3pHOm0qFih8ZQ/kbd1uCsPRQ4i1mzObfSocKzwJAd4fw4a2HEqy915dh8RUHtt1SK8Heg3ZeGtqa
+          99xxeynEEIRxhjuQVpjGIe3DOHd/RvhT/zHHBq+sFAWslxZXCK4HuuIaJLLPgYWOY601P6VwQKiz
+          3ZhwmrPtm+Oxi4MR6AyH58BIpcBjoJ9XRmvzijsg+BoWF579fb2Ejr+cvyxKsyjB+ctpktD08dr8
+          BTlpQfPC53Ar1qofB/mwad229St9HmxEssdGuEV2D+t4/xvzz+Qx+QUAAA==
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:43 GMT
+        ETag:
+          - W/"b5da68d879a3576d110a95d8282e683a146f35e1b24359ad1105df5cc9185c29"
+        Last-Modified:
+          - Sun, 24 Sep 2023 10:32:34 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BEB3C:2646335:65102742
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4996"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "4"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/organizations/119798021/team/8630739/repos?per_page=100
+    response:
+      body:
+        string: "[]"
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Length:
+          - "2"
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:43 GMT
+        ETag:
+          - '"3f3facd3b416cb6374c98fce6d216cb87623bb9dce5290cce4f9f16dac6f1003"'
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BEC0F:2646403:65102743
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4995"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "5"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: '{"permission": "push"}'
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "22"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: PUT
+      uri: https://api.github.com/organizations/119798021/team/8630739/repos/OCA-devel/test-repo-1
+    response:
+      body:
+        string: ""
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Content-Security-Policy:
+          - default-src 'none'
+        Date:
+          - Sun, 24 Sep 2023 12:10:44 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BECCF:26464D0:65102743
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4994"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "6"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 204
+        message: No Content
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/user
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA51U24rbMBD9laLnZH3J3VD60j70YRcKaSl9MbKsOOoqkpHHManJv/fIl900LAVv
+          MMQezzlzdGbGLdO2UIYlTJLNpNaczZjKWRJvV7sw2oQzZmwuUx9ij5+/rX/8fNLi99fl0/65edyL
+          Bun8zIm7tHYaOUeiskqCoA9WD4WiY53VlXTCGpKGHoQ9BXUw8n86f1yCo3ADS1cIgTu2Ug1MPRx0
+          VXCj+EgnfSegL9yl3yQerNa2Afpe7v8KBC8oCOvvlSnewQBUG1g6SriFI1z9wVVF08R0iDbwf2iL
+          56hgv5P5JEEDBnIaAyVt4GRpO7I6q4RTJSlrpgn7Bwkm6wpu1B8+nQnICgRe0jQJHQJIecakTYP2
+          kDYonTpzcfFWOCmkOsPYd9DdYcFGl1Jitr+j8d5mRTLl+cnv3oHrSmLR+MknfDFOiQ/7l23EBJfc
+          XFhiaq1nLMPC9iuirei8Hd/IE1dYwT7tqJzkmQbhAFN2vKVGEQ0j2NfsU8o600qkvYfJejFjQ6Sb
+          OJbgW/C6CMk2utkFlkRIFyhJsIsTBMb4eszD1TwK9+EmWW6TePEL567L/DYnXszD3Txe7qMoWeHa
+          +JyuBbDntS5Z4jod44NC6PHDm78Rz1X1jBXjBc6/W2xX0IbF55l1nKzrz0KNTQ9c4DnlNXbSkBr9
+          JFejH6Xm8LYd+3JwUvrGlVx41s16tY6Xu91b1HdCoxC/6/Uv1sGbk2wFAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:46 GMT
+        ETag:
+          - W/"14e8ff026dd9aa7ece4930c41ac658571d2d6897aea4d00d6beb51e6a5dde22f"
+        Last-Modified:
+          - Sun, 24 Sep 2023 11:51:57 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BF3CE:2646BCB:65102744
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/user
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA51U24rbMBD9laLnZH3J3VD60j70YRcKaSl9MbKsOOoqkpHHManJv/fIl900LAVv
+          MMQezzlzdGbGLdO2UIYlTJLNpNaczZjKWRJvV7sw2oQzZmwuUx9ij5+/rX/8fNLi99fl0/65edyL
+          Bun8zIm7tHYaOUeiskqCoA9WD4WiY53VlXTCGpKGHoQ9BXUw8n86f1yCo3ADS1cIgTu2Ug1MPRx0
+          VXCj+EgnfSegL9yl3yQerNa2Afpe7v8KBC8oCOvvlSnewQBUG1g6SriFI1z9wVVF08R0iDbwf2iL
+          56hgv5P5JEEDBnIaAyVt4GRpO7I6q4RTJSlrpgn7Bwkm6wpu1B8+nQnICgRe0jQJHQJIecakTYP2
+          kDYonTpzcfFWOCmkOsPYd9DdYcFGl1Jitr+j8d5mRTLl+cnv3oHrSmLR+MknfDFOiQ/7l23EBJfc
+          XFhiaq1nLMPC9iuirei8Hd/IE1dYwT7tqJzkmQbhAFN2vKVGEQ0j2NfsU8o600qkvYfJejFjQ6Sb
+          OJbgW/C6CMk2utkFlkRIFyhJsIsTBMb4eszD1TwK9+EmWW6TePEL567L/DYnXszD3Txe7qMoWeHa
+          +JyuBbDntS5Z4jod44NC6PHDm78Rz1X1jBXjBc6/W2xX0IbF55l1nKzrz0KNTQ9c4DnlNXbSkBr9
+          JFejH6Xm8LYd+3JwUvrGlVx41s16tY6Xu91b1HdCoxC/6/Uv1sGbk2wFAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:50 GMT
+        ETag:
+          - W/"14e8ff026dd9aa7ece4930c41ac658571d2d6897aea4d00d6beb51e6a5dde22f"
+        Last-Modified:
+          - Sun, 24 Sep 2023 11:51:57 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25BFE80:2647695:65102746
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4992"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "8"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body:
+        '{"name": "test-repo-2", "description": "test-repo-2", "homepage": "",
+        "private": false, "has_issues": true, "has_wiki": true, "license_template": "",
+        "auto_init": false, "gitignore_template": "", "has_projects": true, "team_id":
+        7089887}'
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "237"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: POST
+      uri: https://api.github.com/orgs/OCA-devel/repos
+    response:
+      body:
+        string: '{"id":695845974,"node_id":"R_kgDOKXnEVg","name":"test-repo-2","full_name":"OCA-devel/test-repo-2","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-2","description":"test-repo-2","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-2","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-2/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-2/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-2/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-2/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-2/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-2/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-2/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-2/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-2/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-2/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-2/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-2/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-2/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-2/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-2/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-2/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-2/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-2/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-2/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-2/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-2/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-2/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-2/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-2/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-2/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-2/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-2/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-2/deployments","created_at":"2023-09-24T12:10:52Z","updated_at":"2023-09-24T12:10:52Z","pushed_at":"2023-09-24T12:10:52Z","git_url":"git://github.com/OCA-devel/test-repo-2.git","ssh_url":"git@github.com:OCA-devel/test-repo-2.git","clone_url":"https://github.com/OCA-devel/test-repo-2.git","svn_url":"https://github.com/OCA-devel/test-repo-2","homepage":"","size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"network_count":0,"subscribers_count":0}'
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Length:
+          - "6437"
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:53 GMT
+        ETag:
+          - '"79c476dc681c7dd24602e2bbb36bb76f70b87d8325303fb0ec545e9549be67b1"'
+        Location:
+          - https://api.github.com/repos/OCA-devel/test-repo-2
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - public_repo, repo
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C02FE:2647B33:6510274A
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4991"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "9"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 201
+        message: Created
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/orgs/OCA-devel/teams/test-team-2
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA61UTY/aMBD9Lz6TzcemC1iqVrvtoTdaaU+9WMYxwcWxI4+TFUX8904+oIZFha72
+          gsh45tnz3pvZEcMrSSjxEnzkJa+ijEyIKgidPdwn03w6IcYWknUR8sI2r18Xz9vvn55F/lROvy0x
+          F3RTvgEoJAinaq+sIdQ0Wk9I7VTLxRZThbYgCyw11quVErxLYyC9V6aDCsPApOFL3ac3TuPp2vsa
+          aBzzWt2Vyq+b5Z2wVWxdyY363WNBnKbz6XyWZGnc9RSPvSDG2leanQKdgkC8+PIUFbKVuq8F/A2p
+          qWS1lA7OMN7xmHhE2o1/9vg6J2sLylun5Efc0MMhbC1dpQB6MUiNamBMOMm9LBj3GMuS7D5K5lGW
+          v6QJzROaZD87wuvias6BD2Ebg1DZ2AQbv5MJCZUhdEe0LVX3kCPPeFNnr6NmoeUWbFOOlvtxgwUC
+          9Q50XlUqVPzAGMpv/HUJwtKhBG9dW7v5v9K+omMBoLlB+PDWoQRrb/VlWHzBgXWz1Eqw96Cdloa2
+          5i333J0L0QdhnOEGpBPWeKS9H+fm7wg/tp9zbPDCSlHAWulwheB6oCuuQSL7HFjoOFY7+0sKD4R6
+          14wJxznbvjkeuxiMQGc4PAMjpYIOA/28slrbV9wBwVe/uPDs3+sldPz5/GVRmkUJzl9Ok4SmD5fm
+          L8hJ5zSfdzncibVqx0EeNq3f1t1KXwQbkeyxEe6Q3WEd7/8AnLzPRvkFAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:53 GMT
+        ETag:
+          - W/"2fb32035b641561702c23e8d40e614a61bc4bf0cf123f9c1dfe8fc8f0b352609"
+        Last-Modified:
+          - Sun, 24 Sep 2023 10:40:02 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C0594:2647DCA:6510274D
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4990"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "10"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/organizations/119798021/team/8630747/repos?per_page=100
+    response:
+      body:
+        string: "[]"
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Length:
+          - "2"
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:53 GMT
+        ETag:
+          - '"3f3facd3b416cb6374c98fce6d216cb87623bb9dce5290cce4f9f16dac6f1003"'
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C065C:2647EB0:6510274D
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4989"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "11"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: '{"permission": "push"}'
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "22"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: PUT
+      uri: https://api.github.com/organizations/119798021/team/8630747/repos/OCA-devel/test-repo-2
+    response:
+      body:
+        string: ""
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Content-Security-Policy:
+          - default-src 'none'
+        Date:
+          - Sun, 24 Sep 2023 12:10:54 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C06F3:2647F43:6510274D
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4988"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "12"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 204
+        message: No Content
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "0"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: PUT
+      uri: https://api.github.com/repos/OCA-devel/test-repo-2/collaborators/user3
+    response:
+      body:
+        string: '{"id":235643921,"node_id":"RI_kwDOKXnEVs4OC6QR","repository":{"id":695845974,"node_id":"R_kgDOKXnEVg","name":"test-repo-2","full_name":"OCA-devel/test-repo-2","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-2","description":"test-repo-2","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-2","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-2/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-2/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-2/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-2/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-2/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-2/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-2/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-2/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-2/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-2/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-2/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-2/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-2/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-2/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-2/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-2/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-2/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-2/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-2/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-2/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-2/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-2/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-2/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-2/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-2/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-2/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-2/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-2/deployments"},"invitee":{"login":"user3","id":11252936,"node_id":"MDQ6VXNlcjExMjUyOTM2","avatar_url":"https://avatars.githubusercontent.com/u/11252936?v=4","gravatar_id":"","url":"https://api.github.com/users/user3","html_url":"https://github.com/user3","followers_url":"https://api.github.com/users/user3/followers","following_url":"https://api.github.com/users/user3/following{/other_user}","gists_url":"https://api.github.com/users/user3/gists{/gist_id}","starred_url":"https://api.github.com/users/user3/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/user3/subscriptions","organizations_url":"https://api.github.com/users/user3/orgs","repos_url":"https://api.github.com/users/user3/repos","events_url":"https://api.github.com/users/user3/events{/privacy}","received_events_url":"https://api.github.com/users/user3/received_events","type":"User","site_admin":false},"inviter":{"login":"etobella","id":28590170,"node_id":"MDQ6VXNlcjI4NTkwMTcw","avatar_url":"https://avatars.githubusercontent.com/u/28590170?v=4","gravatar_id":"","url":"https://api.github.com/users/etobella","html_url":"https://github.com/etobella","followers_url":"https://api.github.com/users/etobella/followers","following_url":"https://api.github.com/users/etobella/following{/other_user}","gists_url":"https://api.github.com/users/etobella/gists{/gist_id}","starred_url":"https://api.github.com/users/etobella/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/etobella/subscriptions","organizations_url":"https://api.github.com/users/etobella/orgs","repos_url":"https://api.github.com/users/etobella/repos","events_url":"https://api.github.com/users/etobella/events{/privacy}","received_events_url":"https://api.github.com/users/etobella/received_events","type":"User","site_admin":false},"permissions":"write","created_at":"2023-09-24T12:10:54Z","url":"https://api.github.com/user/repository_invitations/235643921","html_url":"https://github.com/OCA-devel/test-repo-2/invitations"}'
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Length:
+          - "6261"
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:54 GMT
+        ETag:
+          - '"427a17411216d60060513b98b38831a9263a5f2c23a5c4761183be04b8409e2b"'
+        Location:
+          - https://api.github.com/user/repository_invitations/235643921
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C082B:264806A:6510274E
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4987"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "13"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 201
+        message: Created
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/user
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA51U24rbMBD9laLnZH3J3VD60j70YRcKaSl9MbKsOOoqkpHHManJv/fIl900LAVv
+          MMQezzlzdGbGLdO2UIYlTJLNpNaczZjKWRJvV7sw2oQzZmwuUx9ij5+/rX/8fNLi99fl0/65edyL
+          Bun8zIm7tHYaOUeiskqCoA9WD4WiY53VlXTCGpKGHoQ9BXUw8n86f1yCo3ADS1cIgTu2Ug1MPRx0
+          VXCj+EgnfSegL9yl3yQerNa2Afpe7v8KBC8oCOvvlSnewQBUG1g6SriFI1z9wVVF08R0iDbwf2iL
+          56hgv5P5JEEDBnIaAyVt4GRpO7I6q4RTJSlrpgn7Bwkm6wpu1B8+nQnICgRe0jQJHQJIecakTYP2
+          kDYonTpzcfFWOCmkOsPYd9DdYcFGl1Jitr+j8d5mRTLl+cnv3oHrSmLR+MknfDFOiQ/7l23EBJfc
+          XFhiaq1nLMPC9iuirei8Hd/IE1dYwT7tqJzkmQbhAFN2vKVGEQ0j2NfsU8o600qkvYfJejFjQ6Sb
+          OJbgW/C6CMk2utkFlkRIFyhJsIsTBMb4eszD1TwK9+EmWW6TePEL567L/DYnXszD3Txe7qMoWeHa
+          +JyuBbDntS5Z4jod44NC6PHDm78Rz1X1jBXjBc6/W2xX0IbF55l1nKzrz0KNTQ9c4DnlNXbSkBr9
+          JFejH6Xm8LYd+3JwUvrGlVx41s16tY6Xu91b1HdCoxC/6/Uv1sGbk2wFAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:10:57 GMT
+        ETag:
+          - W/"14e8ff026dd9aa7ece4930c41ac658571d2d6897aea4d00d6beb51e6a5dde22f"
+        Last-Modified:
+          - Sun, 24 Sep 2023 11:51:57 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C10EF:2648950:6510274E
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4986"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "14"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/user
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA51U24rbMBD9laLnZH3J3VD60j70YRcKaSl9MbKsOOoqkpHHManJv/fIl900LAVv
+          MMQezzlzdGbGLdO2UIYlTJLNpNaczZjKWRJvV7sw2oQzZmwuUx9ij5+/rX/8fNLi99fl0/65edyL
+          Bun8zIm7tHYaOUeiskqCoA9WD4WiY53VlXTCGpKGHoQ9BXUw8n86f1yCo3ADS1cIgTu2Ug1MPRx0
+          VXCj+EgnfSegL9yl3yQerNa2Afpe7v8KBC8oCOvvlSnewQBUG1g6SriFI1z9wVVF08R0iDbwf2iL
+          56hgv5P5JEEDBnIaAyVt4GRpO7I6q4RTJSlrpgn7Bwkm6wpu1B8+nQnICgRe0jQJHQJIecakTYP2
+          kDYonTpzcfFWOCmkOsPYd9DdYcFGl1Jitr+j8d5mRTLl+cnv3oHrSmLR+MknfDFOiQ/7l23EBJfc
+          XFhiaq1nLMPC9iuirei8Hd/IE1dYwT7tqJzkmQbhAFN2vKVGEQ0j2NfsU8o600qkvYfJejFjQ6Sb
+          OJbgW/C6CMk2utkFlkRIFyhJsIsTBMb4eszD1TwK9+EmWW6TePEL567L/DYnXszD3Txe7qMoWeHa
+          +JyuBbDntS5Z4jod44NC6PHDm78Rz1X1jBXjBc6/W2xX0IbF55l1nKzrz0KNTQ9c4DnlNXbSkBr9
+          JFejH6Xm8LYd+3JwUvrGlVx41s16tY6Xu91b1HdCoxC/6/Uv1sGbk2wFAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 12:11:01 GMT
+        ETag:
+          - W/"14e8ff026dd9aa7ece4930c41ac658571d2d6897aea4d00d6beb51e6a5dde22f"
+        Last-Modified:
+          - Sun, 24 Sep 2023 11:51:57 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - C486:5059:25C1D41:26495EF:65102751
+        X-OAuth-Scopes:
+          - admin:org, repo, user, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4985"
+        X-RateLimit-Reset:
+          - "1695561041"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "15"
+        X-XSS-Protection:
+          - "0"
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+version: 1
