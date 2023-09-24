@@ -58,6 +58,7 @@ class TestManager(TestCase):
                     "description": "Repo used to run real tests on oca-repo-manage tool.",
                     "psc": "test-team-1",
                     "maintainers": [],
+                    "default_branch": "16.0",
                     "branches": ["16.0", "15.0"],
                 },
                 "test-repo-2": {

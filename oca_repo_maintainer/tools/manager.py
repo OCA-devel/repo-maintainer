@@ -166,6 +166,9 @@ class RepoManager:
             for branch in repo_data.get("branches"):
                 if str(branch) not in repo_branches:
                     self._create_branch(repo, gh_repo, str(branch))
+            branch = repo_data.get("default_branch")
+            if branch and gh_repo.default_branch != branch:
+                gh_repo.edit(name=gh_repo.name, default_branch=branch)
 
     def _create_branch(self, repo, gh_repo, version):
         try:

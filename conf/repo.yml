@@ -2,6 +2,7 @@ account-analytic:
   maintainers: []
   name: Odoo Account Analytic Related Addons
   psc: accounting
+  default_branch: "14.0"
   branches:
     - "12.0"
     - "13.0"
@@ -12,6 +13,7 @@ account-budgeting:
   maintainers: []
   name: Account budgeting
   psc: accounting
+  default_branch: "15.0"
   branches:
     - "14.0"
     - "15.0"
@@ -20,6 +22,7 @@ wms:
   maintainers: []
   name: Warehouse Management System for advance logistic with Odoo
   psc: logistics
+  default_branch: "16.0"
   branches:
     - "15.0"
     - "16.0"
