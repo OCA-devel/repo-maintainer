@@ -1,1 +1,1 @@
-from . import test_gh
+from . import test_manager

@@ -1,12 +1,17 @@
-repo1:
+test-repo-1:
+  name: Test repo 1
+  description: Repo used to run real tests on oca-repo-manage tool.
+  psc: test-team-1
   maintainers: []
-  name: Repository 1
-  psc: team1
   branches:
     - "16.0"
-repo2:
-  maintainers: [user3]
+    - "15.0"
+test-repo-2:
   name: Repository 2
-  psc: team2
+  description: Repo used to run real tests on oca-repo-manage tool.
+  psc: test-team-2
+  maintainers:
+    - user3
   branches:
+    - "13.0"
     - "12.0"

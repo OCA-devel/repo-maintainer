@@ -1,0 +1,536 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate, br
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/orgs/OCA-devel
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA61UTXPTMBT8Lz6ntZ1JU+wZBijcCzOcuGhk+dkRkSUjycmETv87K9tJnDalDUNO
+          sfT2fezu00OkTC11lEf3nz9dlbQhFc0iWUZ5mma32btkns4ibUpi4Sy6Z+v6y/3d7uvN3TfEdVbh
+          cOV96/I45q28rqVfdcW1ME1sbO3iaVZLrXHsAkzcI1AHbWl/GXSAALsyZn0ZtEcEFpzr6DLoAAG2
+          oaYgexl4xDzEw59HpGm7QknB/iXbKXSalG+45/apEP2hGwXsHFlhtAftvZZdfLDDh837BToryQkr
+          Wy8NzKM7pQJfbENWVpJglYorR2CfOwYjcC1/8xDLWmt+kvAuyr3txoBeZumN3T27HqcYjJAvD4zU
+          0oUcySyqjFJmC64nX1LX/dfKN+rJnBODTr0pLHFPJeMehp4n8/lVOr9KFt/TRZ4kebr8Edzeli/F
+          pFm+yEIMt2IlN2OigRa/aymszoQFBHrjucK4ErwTG+dDy2argX5+vj85Dl5Kt2ad4zWyz5ObWSTA
+          BC+M5WByYKOQSoELRg2XYVPJm4IQ9BHjwllcC35NweolVbxTfuhjVIJsAzv3+kZgp5y4WnDNBsaO
+          CIlEo6Z+a1jFBdrA9a9OWmpgJEaaF2rijb2reS9gOS3eJw92GclDyPnyU3+Evidd7NNPmj2h9fVw
+          iQWwGjIdDNqnH619Lj/EOLAwva+MXZ+Keqg+ZttSwbBpjfTMyVqbqtpzd1ymcxWHB6J9qfCo0n7w
+          k7gWBojyh0jzJhi0skQg2bVc4DO7Xd4s54ssw8qdmjRN8MPewVsQzUEojLwAcPiXPGILyg281d+K
+          zkq/22vPQATTtD3PaEkt6RIW9owrsnjxR8u8GXaoN+zqRQlIix2rLW9XbyuLWpagFvyl+yUb7P33
+          Xp+C2s6twqPn8SYGv/+XJKJz3jQMq79+tnSvNTDBDu/64x807WTNIwgAAA==
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - private, max-age=60, s-maxage=60
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 10:25:21 GMT
+        ETag:
+          - W/"2f95ce67aa1d72be2b4b629908c5178bd73b34885baa55141a74d3f20fdf16e7"
+        Last-Modified:
+          - Sun, 04 Dec 2022 14:19:49 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept, Authorization, Cookie, X-GitHub-OTP
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - admin:org, read:org, repo, user, write:org
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - 98AE:6878:D2E47DA:D52C032:65100E91
+        X-OAuth-Scopes:
+          - admin:org, repo, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695552720"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        github-authentication-token-expiration:
+          - 2023-12-22 13:07:17 UTC
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate, br
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/rate_limit
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6WT0Y6DIBBF/4VnH9RKjf4MITirkyi4DD40Tf99B21aNdrsZp8wDJzce7nehQdy
+          kzdAor4L4zzEtccBg6hlmqaJmAgaUZcJHx00WrStqIuqusQNAj6WXSspZV7m6SMRBNqbbgW5vBD8
+          sULE/Q0gy1PJgNbrsfvuT2RsGYvADaUoi0hBG4BJAZ1Vg7b4BcRKD539FrnkpHAYnV+zsndIW9Q8
+          OLJoXAOKjLYxTDWNvdOc8Esc3zvJbJkc+dUmWiXlJ2vBKw8tUlj878gf0Hu5zyzJ4LCGrGuxc3z+
+          IA2MYBuw5qbI6pE6F+bKPav29xD11GBQveM2vimlPLM3T46SWx5j39rsjLOnzK3lwnHW//t1Hj9Z
+          ISasjAMAAA==
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - no-cache
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 10:25:45 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - 98AE:6878:D2E8DC0:D5306D3:65100E91
+        X-OAuth-Scopes:
+          - admin:org, repo, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695552720"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        github-authentication-token-expiration:
+          - 2023-12-22 13:07:17 UTC
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate, br
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/rate_limit
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6WTwW6DMBBE/8VnDkBCEPyMZZktrARr6jWHKsq/dw1RAgiqVj0Zee2nmfFwVx7Y
+          Td4Cq/qurPMQ1x4HDKou0jRN1MTQqLpM5OhgkJBaVV+r6hI3GORYdquKosjLPH0kisF4260glxdC
+          PlaIuL8BZHl6E0Drzdh99icytoxF4IZyLa+RghRASAEd6cEQfgCL0kNnv0UuOWkcRufXrOwd0hY1
+          D44sWteAZmsohqmnsXdGEn6Jk3snmS2TI7/GRqus/UQEXntokcPif0f+Ab2X+8ySLQ5ryLoWO8fn
+          D9LACNQA2S/NZEbuXJgr96za30M0U4NB907a+KaUxZm9eXKU3PIY+9ZmZ5w9ZW6tFE6y/t+v8/gG
+          xzb7bYwDAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - no-cache
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 10:25:46 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - 98AE:6878:D2E8E61:D53075F:65100EA9
+        X-OAuth-Scopes:
+          - admin:org, repo, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695552720"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        github-authentication-token-expiration:
+          - 2023-12-22 13:07:17 UTC
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate, br
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/rate_limit
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6WTwW6DMBBE/8VnDkBCEPyMZZktrARr6jWHKsq/dw1RAgiqVj0Zee2nmfFwVx7Y
+          Td4Cq/qurPMQ1x4HDKou0jRN1MTQqLpM5OhgkJBaVV+r6hI3GORYdquKosjLPH0kisF4260glxdC
+          PlaIuL8BZHl6E0Drzdh99icytoxF4IZyLa+RghRASAEd6cEQfgCL0kNnv0UuOWkcRufXrOwd0hY1
+          D44sWteAZmsohqmnsXdGEn6Jk3snmS2TI7/GRqus/UQEXntokcPif0f+Ab2X+8ySLQ5ryLoWO8fn
+          D9LACNQA2S/NZEbuXJgr96za30M0U4NB907a+KaUxZm9eXKU3PIY+9ZmZ5w9ZW6tFE6y/t+v8/gG
+          xzb7bYwDAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - no-cache
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 10:25:46 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - 98AE:6878:D2E8F7E:D53088D:65100EAA
+        X-OAuth-Scopes:
+          - admin:org, repo, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695552720"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        github-authentication-token-expiration:
+          - 2023-12-22 13:07:17 UTC
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate, br
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/rate_limit
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6WTwW6DMBBE/8VnDkBCEPyMZZktrARr6jWHKsq/dw1RAgiqVj0Zee2nmfFwVx7Y
+          Td4Cq/qurPMQ1x4HDKou0jRN1MTQqLpM5OhgkJBaVV+r6hI3GORYdquKosjLPH0kisF4260glxdC
+          PlaIuL8BZHmeC6D1Zuw++xMZW8YicEO5lrdIQQogpICO9GAIP4BF6aGz3yKXnDQOo/NrVvYOaYua
+          B0cWrWtAszUUw9TT2DsjCb/Eyb2TzJbJkV9jo1XWfiICrz20yGHxvyP/gN7LfWbJFoc1ZF2LnePz
+          B2lgBGqA7JdmMiN3LsyVe1bt7yGaqcGgeydtfFPK4szePDlKbnmMfWuzM86eMrdWCidZ/+/XeXwD
+          NkcCrowDAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - no-cache
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 10:26:02 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - 98AE:6878:D2EBDA6:D53375C:65100EAA
+        X-OAuth-Scopes:
+          - admin:org, repo, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695552720"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        github-authentication-token-expiration:
+          - 2023-12-22 13:07:17 UTC
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - application/vnd.github.v3.full+json
+        Accept-Charset:
+          - utf-8
+        Accept-Encoding:
+          - gzip, deflate, br
+        Authorization:
+          - token ghp_fake_test_token
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/json
+        User-Agent:
+          - github3.py/4.0.1
+      method: GET
+      uri: https://api.github.com/rate_limit
+    response:
+      body:
+        string: !!binary |
+          H4sIAAAAAAAAA6WTwW6DMBBE/8VnDkBCEPyMZZktrARr6jWHKsq/dw1RAgiqVj0Zee2nmfFwVx7Y
+          Td4Cq/qurPMQ1x4HDKou0jRN1MTQqLpM5OhgkJBaVV+r6hI3GORYdquKosjLPH0kisF4260glxdC
+          PlaIuL8BZHmeC6D1Zuw++xMZW8YicEO5lrdIQQogpICO9GAIP4BF6aGz3yKXnDQOo/NrVvYOaYua
+          B0cWrWtAszUUw9TT2DsjCb/Eyb2TzJbJkV9jo1XWfiICrz20yGHxvyP/gN7LfWbJFoc1ZF2LnePz
+          B2lgBGqA7JdmMiN3LsyVe1bt7yGaqcGgeydtfFPK4szePDlKbnmMfWuzM86eMrdWCidZ/+/XeXwD
+          NkcCrowDAAA=
+      headers:
+        Access-Control-Allow-Origin:
+          - "*"
+        Access-Control-Expose-Headers:
+          - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit,
+            X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource,
+            X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+            X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+        Cache-Control:
+          - no-cache
+        Content-Encoding:
+          - gzip
+        Content-Security-Policy:
+          - default-src 'none'
+        Content-Type:
+          - application/json; charset=utf-8
+        Date:
+          - Sun, 24 Sep 2023 10:26:02 GMT
+        Referrer-Policy:
+          - origin-when-cross-origin, strict-origin-when-cross-origin
+        Server:
+          - GitHub.com
+        Strict-Transport-Security:
+          - max-age=31536000; includeSubdomains; preload
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding, Accept, X-Requested-With
+        X-Accepted-OAuth-Scopes:
+          - ""
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - deny
+        X-GitHub-Media-Type:
+          - github.v3; param=full; format=json
+        X-GitHub-Request-Id:
+          - 98AE:6878:D2EBE70:D533840:65100EBA
+        X-OAuth-Scopes:
+          - admin:org, repo, workflow
+        X-RateLimit-Limit:
+          - "5000"
+        X-RateLimit-Remaining:
+          - "4993"
+        X-RateLimit-Reset:
+          - "1695552720"
+        X-RateLimit-Resource:
+          - core
+        X-RateLimit-Used:
+          - "7"
+        X-XSS-Protection:
+          - "0"
+        github-authentication-token-expiration:
+          - 2023-12-22 13:07:17 UTC
+        x-github-api-version-selected:
+          - "2022-11-28"
+      status:
+        code: 200
+        message: OK
+version: 1
