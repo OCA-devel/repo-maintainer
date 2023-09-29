@@ -1,3 +1,5 @@
+# For testing: this repo must exist already
+# but have a different default branch
 test-repo-1:
   name: Test repo 1
   description: Repo used to run real tests on oca-repo-manage tool.
@@ -7,12 +9,13 @@ test-repo-1:
   branches:
     - "16.0"
     - "15.0"
+# For testing: this repo must NOT exist to test creation
 test-repo-2:
   name: Repository 2
   description: Repo used to run real tests on oca-repo-manage tool.
   psc: test-team-2
   maintainers:
-    - user3
+    - simahawk
   branches:
     - "13.0"
     - "12.0"

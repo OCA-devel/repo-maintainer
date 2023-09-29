@@ -5,7 +5,11 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 import json
+import os
+import tempfile
 from unittest import TestCase, mock
+
+import copier
 
 from oca_repo_maintainer.tools.manager import RepoManager
 
@@ -16,8 +20,7 @@ class TestManager(TestCase):
     def setUp(self):
         self.org = "OCA-devel"
         # IMPORTANT: when you want to record or update cassettes
-        # you  must replace this token w/ a real one
-        # before running tests.
+        # you  must replace this token w/ a real one before running tests.
         # SUPER IMPORTANT: after you do that,
         # replace the real token everywhere before staging changes
         self.token = "ghp_fake_test_token"
@@ -65,7 +68,7 @@ class TestManager(TestCase):
                     "name": "Repository 2",
                     "description": "Repo used to run real tests on oca-repo-manage tool.",
                     "psc": "test-team-2",
-                    "maintainers": ["user3"],
+                    "maintainers": ["simahawk"],
                     "branches": ["13.0", "12.0"],
                 },
             },
@@ -161,6 +164,210 @@ class TestManager(TestCase):
                 self.assertEqual(getattr(req, k), expected[k])
             if expected.get("body"):
                 self.assertEqual(json.loads(req.body), expected["body"])
+
+    def test_process_repo(self):
+        with vcr.use_cassette("setup_gh"):
+            self.manager._setup_gh()
+        # generate clone dir here and force it to take control on it
+        clone_dir_1 = tempfile.mkdtemp()
+        clone_dir_2 = tempfile.mkdtemp()
+
+        def mkdtemp():
+            # after the 1st git operation the dir will be removed
+            if os.path.exists(clone_dir_1):
+                return clone_dir_1
+            return clone_dir_2
+
         with vcr.use_cassette("process_repositories") as cassette:
-            with mock.patch.object(RepoManager, "push_branch"):
+            with (
+                mock.patch.object(tempfile, "mkdtemp", mkdtemp),
+                mock.patch.object(RepoManager, "_run_cmd") as run_cmd,
+                mock.patch.object(copier, "run_copy") as run_copy,
+            ):
                 self.manager._process_repositories()
+
+        # check 2 calls to copier, 1 for branch 13 and one for branch 12
+        expected_copier_cmd = (
+            self._expected_copier_cmd(clone_dir_1, "12.0"),
+            self._expected_copier_cmd(clone_dir_2, "13.0"),
+        )
+        for call, cmd in zip(run_copy.call_args_list, expected_copier_cmd):
+            self.assertEqual(call.args, cmd["cmd"])
+            self.assertEqual(call.kwargs, cmd["kw"])
+        # check git operations
+        expected_git_ops = self._expected_git_ops(
+            clone_dir_1, "12.0"
+        ) + self._expected_git_ops(clone_dir_2, "13.0")
+
+        for call, op in zip(run_cmd.call_args_list, expected_git_ops):
+            self.assertEqual(call.args[0], op["cmd"])
+            self.assertEqual(call.kwargs, op["kw"])
+
+        expected_requests = (
+            # get repos
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/repos?per_page=100",
+                "method": "GET",
+            },
+            # get board team
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/board",
+                "method": "GET",
+            },
+            # get repo
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-1",
+                "method": "GET",
+            },
+            # get branches
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-1/branches?per_page=100",  # noqa
+                "method": "GET",
+            },
+            # get team
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-1",
+                "method": "GET",
+            },
+            # get team repos
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630739/repos?per_page=100",  # noqa
+                "method": "GET",
+            },
+            # set default branch
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-1",
+                "method": "PATCH",
+                "body": {"name": "test-repo-1", "default_branch": "16.0"},
+            },
+            # create repo 2
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/repos",
+                "method": "POST",
+                "body": {
+                    "name": "test-repo-2",
+                    "description": "test-repo-2",
+                    "homepage": "",
+                    "private": False,
+                    "has_issues": True,
+                    "has_wiki": True,
+                    "license_template": "",
+                    "auto_init": False,
+                    "gitignore_template": "",
+                    "has_projects": True,
+                    "team_id": 7089887,
+                },
+            },
+            # get team 2
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-2",
+                "method": "GET",
+            },
+            # get team 2 repos
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/repos?per_page=100",  # noqa
+                "method": "GET",
+            },
+            # set perm
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/repos/OCA-devel/test-repo-2",  # noqa
+                "method": "PUT",
+                "body": {"permission": "push"},
+            },
+            # set user on repo
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-2/collaborators/simahawk",  # noqa
+                "method": "PUT",
+                "body": None,
+            },
+            {
+                "url": "https://api.github.com/user",
+                "method": "GET",
+            },
+            {
+                "url": "https://api.github.com/user",
+                "method": "GET",
+            },
+        )
+        for req, expected in zip(cassette.requests, expected_requests):
+            for k in ("url", "method"):
+                self.assertEqual(
+                    getattr(req, k), expected[k], f"{k} wrong for {req.url}"
+                )
+            if expected.get("body"):
+                self.assertEqual(json.loads(req.body), expected["body"])
+
+    def _expected_copier_cmd(self, clone_dir, branch):
+        return {
+            "cmd": ("git+https://github.com/OCA/oca-addons-repo-template", clone_dir),
+            "kw": {
+                "data": {
+                    "odoo_version": branch,
+                    "repo_description": "test-repo-2",
+                    "repo_name": "test-repo-2",
+                    "repo_slug": "test-repo-2",
+                },
+                "defaults": True,
+                "unsafe": True,
+            },
+        }
+
+    def _expected_git_ops(self, clone_dir, branch):
+        ops = (
+            {
+                "cmd": ["git", "init"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "add", "-A"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "commit", "-m", "Initial commit"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "checkout", "-b", branch],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": [
+                    "git",
+                    "remote",
+                    "add",
+                    "origin",
+                    "https://api.github.com/repos/OCA-devel/test-repo-2",
+                ],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": [
+                    "git",
+                    "remote",
+                    "set-url",
+                    "--push",
+                    "origin",
+                    f"https://{self.token}@github.com/OCA-devel/test-repo-2",
+                ],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "push", "origin", "HEAD"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+        )
+        return ops
