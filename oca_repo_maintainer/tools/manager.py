@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO, handlers=[handler])
 _logger = logging.getLogger(__name__)
 
 
-def check_call(cmd, cwd, log_error=True, extra_cmd_args=False, env=None):
+def check_call(cmd, cwd=None, log_error=True, extra_cmd_args=False, env=None):
     if extra_cmd_args:
         cmd += extra_cmd_args
     cp = subprocess.run(
@@ -81,7 +81,7 @@ class RepoManager:
         except CalledProcessError:
             name = None
         if not name:
-            check_call(
+            self._run_cmd(
                 ["git", "config", "user.name", gh_user.name or gh_user.login],
                 cwd=clone_dir,
             )
@@ -90,7 +90,7 @@ class RepoManager:
         except CalledProcessError:
             email = None
         if not email:
-            check_call(
+            self._run_cmd(
                 ["git", "config", "user.name", gh_user.name or gh_user.login],
                 cwd=clone_dir,
             )
@@ -163,69 +163,72 @@ class RepoManager:
                 )
             for member in repo_data.get("maintainers", []):
                 gh_repo.add_collaborator(member)
-            for branch in repo_data.get("branches"):
+            for branch in sorted(repo_data.get("branches")):
                 if str(branch) not in repo_branches:
-                    self._create_branch(repo, gh_repo, str(branch))
+                    self._create_branch(gh_repo, str(branch))
             branch = repo_data.get("default_branch")
             if branch and gh_repo.default_branch != branch:
                 gh_repo.edit(name=gh_repo.name, default_branch=branch)
 
-    def _create_branch(self, repo, gh_repo, version):
+    def _create_branch(self, gh_repo, version):
+        clone_dir = tempfile.mkdtemp()
         try:
-            clone_dir = tempfile.mkdtemp()
-            copier.run_copy(
-                self.new_repo_template,
-                clone_dir,
-                defaults=True,
-                unsafe=True,
-                data={
-                    "repo_name": repo,
-                    "repo_slug": repo,
-                    "repo_description": repo,
-                    "odoo_version": version,
-                },
-            )
-            check_call(
-                ["git", "init"],
-                cwd=clone_dir,
-            )
-            self._setup_user(clone_dir)
-            check_call(
-                ["git", "add", "-A"],
-                cwd=clone_dir,
-            )
-            check_call(
-                ["git", "commit", "-m", "Initial commit"],
-                cwd=clone_dir,
-            )
-            check_call(
-                ["git", "checkout", "-b", version],
-                cwd=clone_dir,
-            )
-            check_call(
-                ["git", "remote", "add", "origin", gh_repo.url],
-                cwd=clone_dir,
-            )
-            check_call(
-                [
-                    "git",
-                    "remote",
-                    "set-url",
-                    "--push",
-                    "origin",
-                    f"https://{self.token}@github.com/{self.org}/{repo}",
-                ],
-                cwd=clone_dir,
-            )
-            self.push_branch(clone_dir)
+            self._init_branch(clone_dir, gh_repo, version)
         except CalledProcessError:
             _logger.error("Something failed when the new repo was being created")
             raise
         finally:
             shutil.rmtree(clone_dir)
 
-    def push_branch(self, clone_dir):
-        check_call(
+    def _init_branch(self, clone_dir, gh_repo, version):
+        copier.run_copy(
+            self.new_repo_template,
+            clone_dir,
+            defaults=True,
+            unsafe=True,
+            data={
+                "repo_name": gh_repo.name,
+                "repo_slug": gh_repo.name,
+                "repo_description": gh_repo.name,
+                "odoo_version": version,
+            },
+        )
+        self._run_cmd(
+            ["git", "init"],
+            cwd=clone_dir,
+        )
+        self._setup_user(clone_dir)
+        self._run_cmd(
+            ["git", "add", "-A"],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "commit", "-m", "Initial commit"],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "checkout", "-b", version],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "remote", "add", "origin", gh_repo.url],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            [
+                "git",
+                "remote",
+                "set-url",
+                "--push",
+                "origin",
+                f"https://{self.token}@github.com/{self.org}/{gh_repo.name}",
+            ],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
             ["git", "push", "origin", "HEAD"],
             cwd=clone_dir,
         )
+
+    def _run_cmd(self, cmd, cwd, **kw):
+        check_call(cmd, cwd, **kw)
