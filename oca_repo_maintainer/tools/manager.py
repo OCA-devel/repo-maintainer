@@ -60,9 +60,18 @@ class RepoManager:
         self.new_repo_template = self.conf_global.get("template")
 
     def _load_conf(self, name):
-        path = self.conf_dir / f"{name}.yml"
-        with path.open() as fd:
-            return SmartDict(yaml.safe_load(fd.read()))
+        conf = {}
+        path = self.conf_dir / name
+        if path.with_suffix(".yml").exists():
+            # direct yml files
+            with path.with_suffix(".yml").open() as fd:
+                conf.update(yaml.safe_load(fd.read()))
+        else:
+            # folders containing ymls
+            for filepath in path.rglob("*.yml"):
+                with filepath.open() as fd:
+                    conf.update(yaml.safe_load(fd.read()))
+        return SmartDict(conf)
 
     def run(self):
         self._setup_gh()
