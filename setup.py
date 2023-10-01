@@ -16,7 +16,9 @@ install_requires = [
     "sphinx-rtd-theme",
 ]
 
-tests_require = ["unitest"]
+tests_require = [
+    "vcrpy",
+]
 
 
 setup(

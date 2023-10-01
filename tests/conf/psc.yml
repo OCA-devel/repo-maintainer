@@ -1,11 +1,13 @@
-team1:
+test-team-1:
+  name: Test team 1
   members:
-    - user1
-  representatives: []
-  name: Team 01
-team2:
+    - simahawk
+  representatives:
+    - simahawk
+test-team-2:
+  name: Test team 2
   members:
-    - user1
-    - user2
-  representatives: []
-  name: Team 02
+    - simahawk
+    - etobella
+  representatives:
+    - etobella

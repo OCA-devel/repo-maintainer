@@ -1,0 +1,375 @@
+# Copyright 2023 Dixmit
+# @author: Enric Tobella
+# Copyright 2023 Camptocamp SA
+# @author: Simone Orsi
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+
+import json
+import os
+import tempfile
+from unittest import TestCase, mock
+
+import copier
+
+from oca_repo_maintainer.tools.manager import RepoManager
+
+from .common import conf_path, vcr
+
+
+class TestManager(TestCase):
+    def setUp(self):
+        self.org = "OCA-devel"
+        # IMPORTANT: when you want to record or update cassettes
+        # you  must replace this token w/ a real one before running tests.
+        # SUPER IMPORTANT: after you do that,
+        # replace the real token everywhere before staging changes
+        self.token = "ghp_fake_test_token"
+        self.manager = RepoManager(conf_path.as_posix(), self.org, self.token)
+
+    def test_init(self):
+        self.assertEqual(self.manager.org, self.org)
+        self.assertEqual(self.manager.token, self.token)
+        self.assertEqual(
+            self.manager.conf_global,
+            {
+                "owner": "board",
+                "template": "git+https://github.com/OCA/oca-addons-repo-template",
+                "team_maintainers": [],
+                "maintainers": [],
+            },
+        )
+        self.assertEqual(
+            self.manager.conf_psc,
+            {
+                "test-team-1": {
+                    "name": "Test team 1",
+                    "members": ["simahawk"],
+                    "representatives": ["simahawk"],
+                },
+                "test-team-2": {
+                    "name": "Test team 2",
+                    "members": ["simahawk", "etobella"],
+                    "representatives": ["etobella"],
+                },
+            },
+        )
+        self.assertEqual(
+            self.manager.conf_repo,
+            {
+                "test-repo-1": {
+                    "name": "Test repo 1",
+                    "description": "Repo used to run real tests on oca-repo-manage tool.",
+                    "psc": "test-team-1",
+                    "maintainers": [],
+                    "default_branch": "16.0",
+                    "branches": ["16.0", "15.0"],
+                },
+                "test-repo-2": {
+                    "name": "Repository 2",
+                    "description": "Repo used to run real tests on oca-repo-manage tool.",
+                    "psc": "test-team-2",
+                    "maintainers": ["simahawk"],
+                    "branches": ["13.0", "12.0"],
+                },
+            },
+        )
+        self.assertEqual(
+            self.manager.new_repo_template, self.manager.conf_global["template"]
+        )
+
+    @vcr.use_cassette("setup_gh")
+    def test_setup_gh(self):
+        self.manager._setup_gh()
+        self.assertTrue(self.manager.gh)
+        self.assertEqual(
+            self.manager.gh_org.url, "https://api.github.com/orgs/OCA-devel"
+        )
+
+    def test_process_psc(self):
+        with vcr.use_cassette("setup_gh"):
+            self.manager._setup_gh()
+        with vcr.use_cassette("process_psc") as cassette:
+            self.manager._process_psc()
+        # check reques to get existing team
+        expected_requests = (
+            # check the 1st team that already exists
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-1",
+                "method": "GET",
+            },
+            # get members
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630739/members?role=member&per_page=100",  # noqa
+                "method": "GET",
+            },
+            # get maintainers
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630739/members?role=maintainer&per_page=100",  # noqa
+                "method": "GET",
+            },
+            # set simahawk as member
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630739/memberships/simahawk",  # noqa
+                "method": "PUT",
+                "body": {"role": "member"},
+            },
+            # get team 2 which does NOT exist
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-2",  # noqa
+                "method": "GET",
+            },
+            # create team
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams",
+                "method": "POST",
+                "body": {
+                    "name": "test-team-2",
+                    "repo_names": [],
+                    "maintainers": [],
+                    "permission": "pull",
+                    "privacy": "closed",
+                },
+            },
+            # get members
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/members?role=member&per_page=100",  # noqa
+                "method": "GET",
+            },
+            # get maintainers
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/members?role=maintainer&per_page=100",  # noqa
+                "method": "GET",
+            },
+            # set simahawk as member
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/memberships/simahawk",  # noqa
+                "method": "PUT",
+                "body": {"role": "member"},
+            },
+            # set etobella as member
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/memberships/etobella",  # noqa
+                "method": "PUT",
+                "body": {"role": "member"},
+            },
+            # set etobella as maintainer
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/memberships/etobella",  # noqa
+                "method": "PUT",
+                "body": {"role": "maintainer"},
+            },
+        )
+        for req, expected in zip(cassette.requests, expected_requests):
+            for k in ("url", "method"):
+                self.assertEqual(getattr(req, k), expected[k])
+            if expected.get("body"):
+                self.assertEqual(json.loads(req.body), expected["body"])
+
+    def test_process_repo(self):
+        with vcr.use_cassette("setup_gh"):
+            self.manager._setup_gh()
+        # generate clone dir here and force it to take control on it
+        clone_dir_1 = tempfile.mkdtemp()
+        clone_dir_2 = tempfile.mkdtemp()
+
+        def mkdtemp():
+            # after the 1st git operation the dir will be removed
+            if os.path.exists(clone_dir_1):
+                return clone_dir_1
+            return clone_dir_2
+
+        with vcr.use_cassette("process_repositories") as cassette:
+            with (
+                mock.patch.object(tempfile, "mkdtemp", mkdtemp),
+                mock.patch.object(RepoManager, "_run_cmd") as run_cmd,
+                # FIXME: this must be tested too
+                mock.patch.object(RepoManager, "_setup_user"),
+                mock.patch.object(copier, "run_copy") as run_copy,
+            ):
+                self.manager._process_repositories()
+
+        # check 2 calls to copier, 1 for branch 13 and one for branch 12
+        expected_copier_cmd = (
+            self._expected_copier_cmd(clone_dir_1, "12.0"),
+            self._expected_copier_cmd(clone_dir_2, "13.0"),
+        )
+        for call, cmd in zip(run_copy.call_args_list, expected_copier_cmd):
+            self.assertEqual(call.args, cmd["cmd"])
+            self.assertEqual(call.kwargs, cmd["kw"])
+        # check git operations
+        expected_git_ops = self._expected_git_ops(
+            clone_dir_1, "12.0"
+        ) + self._expected_git_ops(clone_dir_2, "13.0")
+
+        for call, op in zip(run_cmd.call_args_list, expected_git_ops):
+            self.assertEqual(call.args[0], op["cmd"])
+            self.assertEqual(call.kwargs, op["kw"])
+
+        expected_requests = (
+            # get repos
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/repos?per_page=100",
+                "method": "GET",
+            },
+            # get board team
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/board",
+                "method": "GET",
+            },
+            # get repo
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-1",
+                "method": "GET",
+            },
+            # get branches
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-1/branches?per_page=100",  # noqa
+                "method": "GET",
+            },
+            # get team
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-1",
+                "method": "GET",
+            },
+            # get team repos
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630739/repos?per_page=100",  # noqa
+                "method": "GET",
+            },
+            # set default branch
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-1",
+                "method": "PATCH",
+                "body": {"name": "test-repo-1", "default_branch": "16.0"},
+            },
+            # create repo 2
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/repos",
+                "method": "POST",
+                "body": {
+                    "name": "test-repo-2",
+                    "description": "test-repo-2",
+                    "homepage": "",
+                    "private": False,
+                    "has_issues": True,
+                    "has_wiki": True,
+                    "license_template": "",
+                    "auto_init": False,
+                    "gitignore_template": "",
+                    "has_projects": True,
+                    "team_id": 7089887,
+                },
+            },
+            # get team 2
+            {
+                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-2",
+                "method": "GET",
+            },
+            # get team 2 repos
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/repos?per_page=100",  # noqa
+                "method": "GET",
+            },
+            # set perm
+            {
+                "url": "https://api.github.com/organizations/119798021/team/8630747/repos/OCA-devel/test-repo-2",  # noqa
+                "method": "PUT",
+                "body": {"permission": "push"},
+            },
+            # set user on repo
+            {
+                "url": "https://api.github.com/repos/OCA-devel/test-repo-2/collaborators/simahawk",  # noqa
+                "method": "PUT",
+                "body": None,
+            },
+            {
+                "url": "https://api.github.com/user",
+                "method": "GET",
+            },
+            {
+                "url": "https://api.github.com/user",
+                "method": "GET",
+            },
+        )
+        for req, expected in zip(cassette.requests, expected_requests):
+            for k in ("url", "method"):
+                self.assertEqual(
+                    getattr(req, k), expected[k], f"{k} wrong for {req.url}"
+                )
+            if expected.get("body"):
+                self.assertEqual(json.loads(req.body), expected["body"])
+
+    def _expected_copier_cmd(self, clone_dir, branch):
+        return {
+            "cmd": ("git+https://github.com/OCA/oca-addons-repo-template", clone_dir),
+            "kw": {
+                "data": {
+                    "odoo_version": branch,
+                    "repo_description": "test-repo-2",
+                    "repo_name": "test-repo-2",
+                    "repo_slug": "test-repo-2",
+                },
+                "defaults": True,
+                "unsafe": True,
+            },
+        }
+
+    def _expected_git_ops(self, clone_dir, branch):
+        ops = (
+            {
+                "cmd": ["git", "init"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "add", "-A"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "commit", "-m", "Initial commit"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "checkout", "-b", branch],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": [
+                    "git",
+                    "remote",
+                    "add",
+                    "origin",
+                    "https://api.github.com/repos/OCA-devel/test-repo-2",
+                ],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": [
+                    "git",
+                    "remote",
+                    "set-url",
+                    "--push",
+                    "origin",
+                    f"https://{self.token}@github.com/OCA-devel/test-repo-2",
+                ],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+            {
+                "cmd": ["git", "push", "origin", "HEAD"],
+                "kw": {
+                    "cwd": clone_dir,
+                },
+            },
+        )
+        return ops

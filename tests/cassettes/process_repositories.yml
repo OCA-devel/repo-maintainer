@@ -1,0 +1,1161 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/orgs/OCA-devel/repos?per_page=100
+  response:
+    body:
+      string: '[{"id":574124203,"node_id":"R_kgDOIjhwqw","name":"repo-maintainer","full_name":"OCA-devel/repo-maintainer","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/repo-maintainer","description":null,"fork":false,"url":"https://api.github.com/repos/OCA-devel/repo-maintainer","forks_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/forks","keys_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/teams","hooks_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/events","assignees_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/tags","blobs_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/subscription","commits_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/merges","archive_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/downloads","issues_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/repo-maintainer/deployments","created_at":"2022-12-04T14:01:03Z","updated_at":"2023-09-22T15:04:03Z","pushed_at":"2023-09-29T16:54:28Z","git_url":"git://github.com/OCA-devel/repo-maintainer.git","ssh_url":"git@github.com:OCA-devel/repo-maintainer.git","clone_url":"https://github.com/OCA-devel/repo-maintainer.git","svn_url":"https://github.com/OCA-devel/repo-maintainer","homepage":null,"size":73,"stargazers_count":0,"watchers_count":0,"language":"Python","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":true,"has_discussions":false,"forks_count":2,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":1,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":2,"open_issues":1,"watchers":0,"default_branch":"master","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}},{"id":695505811,"node_id":"R_kgDOKXSTkw","name":".github","full_name":"OCA-devel/.github","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/.github","description":".github","fork":false,"url":"https://api.github.com/repos/OCA-devel/.github","forks_url":"https://api.github.com/repos/OCA-devel/.github/forks","keys_url":"https://api.github.com/repos/OCA-devel/.github/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/.github/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/.github/teams","hooks_url":"https://api.github.com/repos/OCA-devel/.github/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/.github/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/.github/events","assignees_url":"https://api.github.com/repos/OCA-devel/.github/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/.github/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/.github/tags","blobs_url":"https://api.github.com/repos/OCA-devel/.github/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/.github/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/.github/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/.github/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/.github/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/.github/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/.github/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/.github/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/.github/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/.github/subscription","commits_url":"https://api.github.com/repos/OCA-devel/.github/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/.github/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/.github/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/.github/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/.github/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/.github/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/.github/merges","archive_url":"https://api.github.com/repos/OCA-devel/.github/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/.github/downloads","issues_url":"https://api.github.com/repos/OCA-devel/.github/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/.github/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/.github/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/.github/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/.github/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/.github/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/.github/deployments","created_at":"2023-09-23T11:54:18Z","updated_at":"2023-09-23T11:54:18Z","pushed_at":"2023-09-23T11:54:18Z","git_url":"git://github.com/OCA-devel/.github.git","ssh_url":"git@github.com:OCA-devel/.github.git","clone_url":"https://github.com/OCA-devel/.github.git","svn_url":"https://github.com/OCA-devel/.github","homepage":"","size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}},{"id":695506307,"node_id":"R_kgDOKXSVgw","name":"account-analytic","full_name":"OCA-devel/account-analytic","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/account-analytic","description":"account-analytic","fork":false,"url":"https://api.github.com/repos/OCA-devel/account-analytic","forks_url":"https://api.github.com/repos/OCA-devel/account-analytic/forks","keys_url":"https://api.github.com/repos/OCA-devel/account-analytic/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/account-analytic/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/account-analytic/teams","hooks_url":"https://api.github.com/repos/OCA-devel/account-analytic/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/account-analytic/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/account-analytic/events","assignees_url":"https://api.github.com/repos/OCA-devel/account-analytic/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/account-analytic/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/account-analytic/tags","blobs_url":"https://api.github.com/repos/OCA-devel/account-analytic/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/account-analytic/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/account-analytic/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/account-analytic/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/account-analytic/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/account-analytic/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/account-analytic/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/account-analytic/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/account-analytic/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/account-analytic/subscription","commits_url":"https://api.github.com/repos/OCA-devel/account-analytic/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/account-analytic/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/account-analytic/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/account-analytic/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/account-analytic/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/account-analytic/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/account-analytic/merges","archive_url":"https://api.github.com/repos/OCA-devel/account-analytic/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/account-analytic/downloads","issues_url":"https://api.github.com/repos/OCA-devel/account-analytic/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/account-analytic/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/account-analytic/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/account-analytic/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/account-analytic/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/account-analytic/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/account-analytic/deployments","created_at":"2023-09-23T11:56:16Z","updated_at":"2023-09-23T11:56:17Z","pushed_at":"2023-09-23T12:08:12Z","git_url":"git://github.com/OCA-devel/account-analytic.git","ssh_url":"git@github.com:OCA-devel/account-analytic.git","clone_url":"https://github.com/OCA-devel/account-analytic.git","svn_url":"https://github.com/OCA-devel/account-analytic","homepage":"","size":48,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"14.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}},{"id":695509301,"node_id":"R_kgDOKXShNQ","name":"account-budgeting","full_name":"OCA-devel/account-budgeting","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/account-budgeting","description":"account-budgeting","fork":false,"url":"https://api.github.com/repos/OCA-devel/account-budgeting","forks_url":"https://api.github.com/repos/OCA-devel/account-budgeting/forks","keys_url":"https://api.github.com/repos/OCA-devel/account-budgeting/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/account-budgeting/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/account-budgeting/teams","hooks_url":"https://api.github.com/repos/OCA-devel/account-budgeting/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/account-budgeting/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/account-budgeting/events","assignees_url":"https://api.github.com/repos/OCA-devel/account-budgeting/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/account-budgeting/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/account-budgeting/tags","blobs_url":"https://api.github.com/repos/OCA-devel/account-budgeting/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/account-budgeting/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/account-budgeting/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/account-budgeting/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/account-budgeting/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/account-budgeting/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/account-budgeting/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/account-budgeting/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/account-budgeting/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/account-budgeting/subscription","commits_url":"https://api.github.com/repos/OCA-devel/account-budgeting/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/account-budgeting/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/account-budgeting/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/account-budgeting/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/account-budgeting/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/account-budgeting/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/account-budgeting/merges","archive_url":"https://api.github.com/repos/OCA-devel/account-budgeting/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/account-budgeting/downloads","issues_url":"https://api.github.com/repos/OCA-devel/account-budgeting/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/account-budgeting/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/account-budgeting/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/account-budgeting/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/account-budgeting/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/account-budgeting/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/account-budgeting/deployments","created_at":"2023-09-23T12:08:12Z","updated_at":"2023-09-23T12:08:12Z","pushed_at":"2023-09-23T12:08:21Z","git_url":"git://github.com/OCA-devel/account-budgeting.git","ssh_url":"git@github.com:OCA-devel/account-budgeting.git","clone_url":"https://github.com/OCA-devel/account-budgeting.git","svn_url":"https://github.com/OCA-devel/account-budgeting","homepage":"","size":35,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"15.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}},{"id":695509351,"node_id":"R_kgDOKXShZw","name":"wms","full_name":"OCA-devel/wms","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/wms","description":"wms","fork":false,"url":"https://api.github.com/repos/OCA-devel/wms","forks_url":"https://api.github.com/repos/OCA-devel/wms/forks","keys_url":"https://api.github.com/repos/OCA-devel/wms/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/wms/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/wms/teams","hooks_url":"https://api.github.com/repos/OCA-devel/wms/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/wms/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/wms/events","assignees_url":"https://api.github.com/repos/OCA-devel/wms/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/wms/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/wms/tags","blobs_url":"https://api.github.com/repos/OCA-devel/wms/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/wms/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/wms/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/wms/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/wms/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/wms/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/wms/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/wms/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/wms/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/wms/subscription","commits_url":"https://api.github.com/repos/OCA-devel/wms/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/wms/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/wms/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/wms/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/wms/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/wms/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/wms/merges","archive_url":"https://api.github.com/repos/OCA-devel/wms/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/wms/downloads","issues_url":"https://api.github.com/repos/OCA-devel/wms/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/wms/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/wms/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/wms/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/wms/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/wms/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/wms/deployments","created_at":"2023-09-23T12:08:22Z","updated_at":"2023-09-23T12:08:22Z","pushed_at":"2023-09-23T12:08:29Z","git_url":"git://github.com/OCA-devel/wms.git","ssh_url":"git@github.com:OCA-devel/wms.git","clone_url":"https://github.com/OCA-devel/wms.git","svn_url":"https://github.com/OCA-devel/wms","homepage":"","size":28,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"16.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}},{"id":695509388,"node_id":"R_kgDOKXShjA","name":"testing","full_name":"OCA-devel/testing","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/testing","description":"testing","fork":false,"url":"https://api.github.com/repos/OCA-devel/testing","forks_url":"https://api.github.com/repos/OCA-devel/testing/forks","keys_url":"https://api.github.com/repos/OCA-devel/testing/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/testing/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/testing/teams","hooks_url":"https://api.github.com/repos/OCA-devel/testing/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/testing/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/testing/events","assignees_url":"https://api.github.com/repos/OCA-devel/testing/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/testing/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/testing/tags","blobs_url":"https://api.github.com/repos/OCA-devel/testing/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/testing/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/testing/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/testing/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/testing/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/testing/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/testing/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/testing/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/testing/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/testing/subscription","commits_url":"https://api.github.com/repos/OCA-devel/testing/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/testing/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/testing/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/testing/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/testing/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/testing/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/testing/merges","archive_url":"https://api.github.com/repos/OCA-devel/testing/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/testing/downloads","issues_url":"https://api.github.com/repos/OCA-devel/testing/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/testing/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/testing/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/testing/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/testing/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/testing/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/testing/deployments","created_at":"2023-09-23T12:08:30Z","updated_at":"2023-09-23T12:08:30Z","pushed_at":"2023-09-23T12:08:34Z","git_url":"git://github.com/OCA-devel/testing.git","ssh_url":"git@github.com:OCA-devel/testing.git","clone_url":"https://github.com/OCA-devel/testing.git","svn_url":"https://github.com/OCA-devel/testing","homepage":"","size":21,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"16.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}},{"id":695845928,"node_id":"R_kgDOKXnEKA","name":"test-repo-1","full_name":"OCA-devel/test-repo-1","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-1","description":"test-repo-1","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-1","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-1/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-1/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-1/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-1/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-1/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-1/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-1/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-1/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-1/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-1/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-1/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-1/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-1/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-1/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/deployments","created_at":"2023-09-24T12:10:42Z","updated_at":"2023-09-24T12:10:42Z","pushed_at":"2023-09-24T12:10:51Z","git_url":"git://github.com/OCA-devel/test-repo-1.git","ssh_url":"git@github.com:OCA-devel/test-repo-1.git","clone_url":"https://github.com/OCA-devel/test-repo-1.git","svn_url":"https://github.com/OCA-devel/test-repo-1","homepage":"","size":28,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"15.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}}}]'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:16 GMT
+      ETag:
+      - W/"b5b6f237a8b0d204fc30983254a806d77895e83cb0eec17c93e56e180a8adc40"
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285D766:28E46E4:65192A57
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4998'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '2'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '37784'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/orgs/OCA-devel/teams/board
+  response:
+    body:
+      string: '{"name":"board","id":7089887,"node_id":"T_kwDOByP5Bc4AbC7f","slug":"board","description":"","privacy":"closed","notification_setting":"notifications_enabled","url":"https://api.github.com/organizations/119798021/team/7089887","html_url":"https://github.com/orgs/OCA-devel/teams/board","members_url":"https://api.github.com/organizations/119798021/team/7089887/members{/member}","repositories_url":"https://api.github.com/organizations/119798021/team/7089887/repos","permission":"pull","created_at":"2022-12-04T14:02:22Z","updated_at":"2022-12-04T14:02:22Z","members_count":2,"repos_count":7,"organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","url":"https://api.github.com/orgs/OCA-devel","repos_url":"https://api.github.com/orgs/OCA-devel/repos","events_url":"https://api.github.com/orgs/OCA-devel/events","hooks_url":"https://api.github.com/orgs/OCA-devel/hooks","issues_url":"https://api.github.com/orgs/OCA-devel/issues","members_url":"https://api.github.com/orgs/OCA-devel/members{/member}","public_members_url":"https://api.github.com/orgs/OCA-devel/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","description":null,"is_verified":false,"has_organization_projects":true,"has_repository_projects":true,"public_repos":7,"public_gists":0,"followers":0,"following":0,"html_url":"https://github.com/OCA-devel","created_at":"2022-12-04T14:00:16Z","updated_at":"2022-12-04T14:19:49Z","archived_at":null,"type":"Organization"},"parent":null}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:16 GMT
+      ETag:
+      - W/"6901b72a23cb9084a6361c93292e632962e2cd7ef9ac079b06a3f27501707878"
+      Last-Modified:
+      - Sun, 04 Dec 2022 14:02:22 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285DC81:28E4B90:65192A58
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4997'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '3'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1509'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/repos/OCA-devel/test-repo-1
+  response:
+    body:
+      string: '{"id":695845928,"node_id":"R_kgDOKXnEKA","name":"test-repo-1","full_name":"OCA-devel/test-repo-1","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-1","description":"test-repo-1","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-1","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-1/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-1/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-1/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-1/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-1/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-1/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-1/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-1/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-1/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-1/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-1/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-1/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-1/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-1/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/deployments","created_at":"2023-09-24T12:10:42Z","updated_at":"2023-09-24T12:10:42Z","pushed_at":"2023-09-24T12:10:51Z","git_url":"git://github.com/OCA-devel/test-repo-1.git","ssh_url":"git@github.com:OCA-devel/test-repo-1.git","clone_url":"https://github.com/OCA-devel/test-repo-1.git","svn_url":"https://github.com/OCA-devel/test-repo-1","homepage":"","size":28,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"15.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}},"network_count":0,"subscribers_count":0}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:16 GMT
+      ETag:
+      - W/"4e1d709872a850dee26d264468cddabb3b5f2dad28ff0d0350bf2906b0625926"
+      Last-Modified:
+      - Sun, 24 Sep 2023 12:10:42 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - repo
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285DD1E:28E4C31:65192A58
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4996'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '4'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '6795'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.loki-preview+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/repos/OCA-devel/test-repo-1/branches?per_page=100
+  response:
+    body:
+      string: '[{"name":"15.0","commit":{"sha":"b6e10310a7ba6ee4399a2521ea9d46dd5d6c84c0","url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits/b6e10310a7ba6ee4399a2521ea9d46dd5d6c84c0"},"protected":false,"protection":{"enabled":false,"required_status_checks":{"enforcement_level":"off","contexts":[],"checks":[]}},"protection_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches/15.0/protection"},{"name":"16.0","commit":{"sha":"fff8cd8975eda2c03d6a9860146d0b4ae28d20b8","url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits/fff8cd8975eda2c03d6a9860146d0b4ae28d20b8"},"protected":false,"protection":{"enabled":false,"required_status_checks":{"enforcement_level":"off","contexts":[],"checks":[]}},"protection_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches/16.0/protection"}]'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:17 GMT
+      ETag:
+      - W/"7387e687f19960defcf6f8e857388817295a3f155c82438fab52b94f9409b4cc"
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=loki-preview; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285DDD5:28E4CE9:65192A59
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4995'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '5'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '815'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/orgs/OCA-devel/teams/test-team-1
+  response:
+    body:
+      string: '{"name":"test-team-1","id":8630739,"node_id":"T_kwDOByP5Bc4Ag7HT","slug":"test-team-1","description":null,"privacy":"closed","notification_setting":"notifications_enabled","url":"https://api.github.com/organizations/119798021/team/8630739","html_url":"https://github.com/orgs/OCA-devel/teams/test-team-1","members_url":"https://api.github.com/organizations/119798021/team/8630739/members{/member}","repositories_url":"https://api.github.com/organizations/119798021/team/8630739/repos","permission":"pull","created_at":"2023-09-24T10:32:34Z","updated_at":"2023-09-24T10:32:34Z","members_count":1,"repos_count":1,"organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","url":"https://api.github.com/orgs/OCA-devel","repos_url":"https://api.github.com/orgs/OCA-devel/repos","events_url":"https://api.github.com/orgs/OCA-devel/events","hooks_url":"https://api.github.com/orgs/OCA-devel/hooks","issues_url":"https://api.github.com/orgs/OCA-devel/issues","members_url":"https://api.github.com/orgs/OCA-devel/members{/member}","public_members_url":"https://api.github.com/orgs/OCA-devel/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","description":null,"is_verified":false,"has_organization_projects":true,"has_repository_projects":true,"public_repos":7,"public_gists":0,"followers":0,"following":0,"html_url":"https://github.com/OCA-devel","created_at":"2022-12-04T14:00:16Z","updated_at":"2022-12-04T14:19:49Z","archived_at":null,"type":"Organization"},"parent":null}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:17 GMT
+      ETag:
+      - W/"8751047616f7455d46fac6072e71efa937211a3fd664f766f63673c1dee42d59"
+      Last-Modified:
+      - Sun, 24 Sep 2023 10:32:34 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285DE66:28E4D80:65192A59
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4994'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '6'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1529'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/organizations/119798021/team/8630739/repos?per_page=100
+  response:
+    body:
+      string: '[{"id":695845928,"node_id":"R_kgDOKXnEKA","name":"test-repo-1","full_name":"OCA-devel/test-repo-1","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-1","description":"test-repo-1","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-1","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-1/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-1/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-1/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-1/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-1/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-1/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-1/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-1/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-1/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-1/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-1/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-1/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-1/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-1/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/deployments","created_at":"2023-09-24T12:10:42Z","updated_at":"2023-09-24T12:10:42Z","pushed_at":"2023-09-24T12:10:51Z","git_url":"git://github.com/OCA-devel/test-repo-1.git","ssh_url":"git@github.com:OCA-devel/test-repo-1.git","clone_url":"https://github.com/OCA-devel/test-repo-1.git","svn_url":"https://github.com/OCA-devel/test-repo-1","homepage":"","size":28,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"15.0","permissions":{"admin":false,"maintain":false,"push":true,"triage":true,"pull":true},"role_name":"write"}]'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:17 GMT
+      ETag:
+      - W/"9bfa63eb1ce0b71cddcd57a60d2773fd726c5d2cf78b516efea5c756c373dbd5"
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285DF02:28E4E06:65192A59
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4993'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '7'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '5197'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "test-repo-1", "default_branch": "16.0"}'
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '49'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: PATCH
+    uri: https://api.github.com/repos/OCA-devel/test-repo-1
+  response:
+    body:
+      string: '{"id":695845928,"node_id":"R_kgDOKXnEKA","name":"test-repo-1","full_name":"OCA-devel/test-repo-1","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-1","description":"test-repo-1","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-1","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-1/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-1/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-1/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-1/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-1/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-1/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-1/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-1/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-1/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-1/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-1/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-1/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-1/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-1/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-1/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-1/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-1/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-1/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-1/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-1/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-1/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-1/deployments","created_at":"2023-09-24T12:10:42Z","updated_at":"2023-09-24T12:10:42Z","pushed_at":"2023-09-24T12:10:51Z","git_url":"git://github.com/OCA-devel/test-repo-1.git","ssh_url":"git@github.com:OCA-devel/test-repo-1.git","clone_url":"https://github.com/OCA-devel/test-repo-1.git","svn_url":"https://github.com/OCA-devel/test-repo-1","homepage":"","size":28,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"agpl-3.0","name":"GNU
+        Affero General Public License v3.0","spdx_id":"AGPL-3.0","url":"https://api.github.com/licenses/agpl-3.0","node_id":"MDc6TGljZW5zZTE="},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"16.0","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"}},"network_count":0,"subscribers_count":0}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:18 GMT
+      ETag:
+      - W/"64bc834c727d30780cf41d39ca24801edac0ab057a56c7ee182ea1031a37d6c2"
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285DF97:28E4EB3:65192A59
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4992'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '8'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '6773'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "test-repo-2", "description": "test-repo-2", "homepage": "", "private":
+      false, "has_issues": true, "has_wiki": true, "license_template": "", "auto_init":
+      false, "gitignore_template": "", "has_projects": true, "team_id": 7089887}'
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '237'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: POST
+    uri: https://api.github.com/orgs/OCA-devel/repos
+  response:
+    body:
+      string: '{"id":698869079,"node_id":"R_kgDOKaflVw","name":"test-repo-2","full_name":"OCA-devel/test-repo-2","private":false,"owner":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/OCA-devel/test-repo-2","description":"test-repo-2","fork":false,"url":"https://api.github.com/repos/OCA-devel/test-repo-2","forks_url":"https://api.github.com/repos/OCA-devel/test-repo-2/forks","keys_url":"https://api.github.com/repos/OCA-devel/test-repo-2/keys{/key_id}","collaborators_url":"https://api.github.com/repos/OCA-devel/test-repo-2/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/OCA-devel/test-repo-2/teams","hooks_url":"https://api.github.com/repos/OCA-devel/test-repo-2/hooks","issue_events_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues/events{/number}","events_url":"https://api.github.com/repos/OCA-devel/test-repo-2/events","assignees_url":"https://api.github.com/repos/OCA-devel/test-repo-2/assignees{/user}","branches_url":"https://api.github.com/repos/OCA-devel/test-repo-2/branches{/branch}","tags_url":"https://api.github.com/repos/OCA-devel/test-repo-2/tags","blobs_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/refs{/sha}","trees_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/trees{/sha}","statuses_url":"https://api.github.com/repos/OCA-devel/test-repo-2/statuses/{sha}","languages_url":"https://api.github.com/repos/OCA-devel/test-repo-2/languages","stargazers_url":"https://api.github.com/repos/OCA-devel/test-repo-2/stargazers","contributors_url":"https://api.github.com/repos/OCA-devel/test-repo-2/contributors","subscribers_url":"https://api.github.com/repos/OCA-devel/test-repo-2/subscribers","subscription_url":"https://api.github.com/repos/OCA-devel/test-repo-2/subscription","commits_url":"https://api.github.com/repos/OCA-devel/test-repo-2/commits{/sha}","git_commits_url":"https://api.github.com/repos/OCA-devel/test-repo-2/git/commits{/sha}","comments_url":"https://api.github.com/repos/OCA-devel/test-repo-2/comments{/number}","issue_comment_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues/comments{/number}","contents_url":"https://api.github.com/repos/OCA-devel/test-repo-2/contents/{+path}","compare_url":"https://api.github.com/repos/OCA-devel/test-repo-2/compare/{base}...{head}","merges_url":"https://api.github.com/repos/OCA-devel/test-repo-2/merges","archive_url":"https://api.github.com/repos/OCA-devel/test-repo-2/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/OCA-devel/test-repo-2/downloads","issues_url":"https://api.github.com/repos/OCA-devel/test-repo-2/issues{/number}","pulls_url":"https://api.github.com/repos/OCA-devel/test-repo-2/pulls{/number}","milestones_url":"https://api.github.com/repos/OCA-devel/test-repo-2/milestones{/number}","notifications_url":"https://api.github.com/repos/OCA-devel/test-repo-2/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/OCA-devel/test-repo-2/labels{/name}","releases_url":"https://api.github.com/repos/OCA-devel/test-repo-2/releases{/id}","deployments_url":"https://api.github.com/repos/OCA-devel/test-repo-2/deployments","created_at":"2023-10-01T08:14:18Z","updated_at":"2023-10-01T08:14:18Z","pushed_at":"2023-10-01T08:14:18Z","git_url":"git://github.com/OCA-devel/test-repo-2.git","ssh_url":"git@github.com:OCA-devel/test-repo-2.git","clone_url":"https://github.com/OCA-devel/test-repo-2.git","svn_url":"https://github.com/OCA-devel/test-repo-2","homepage":"","size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","gravatar_id":"","url":"https://api.github.com/users/OCA-devel","html_url":"https://github.com/OCA-devel","followers_url":"https://api.github.com/users/OCA-devel/followers","following_url":"https://api.github.com/users/OCA-devel/following{/other_user}","gists_url":"https://api.github.com/users/OCA-devel/gists{/gist_id}","starred_url":"https://api.github.com/users/OCA-devel/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/OCA-devel/subscriptions","organizations_url":"https://api.github.com/users/OCA-devel/orgs","repos_url":"https://api.github.com/users/OCA-devel/repos","events_url":"https://api.github.com/users/OCA-devel/events{/privacy}","received_events_url":"https://api.github.com/users/OCA-devel/received_events","type":"Organization","site_admin":false},"network_count":0,"subscribers_count":0}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Length:
+      - '6437'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:19 GMT
+      ETag:
+      - '"88f1b8d12cc53a72bc3828b18d3803d78c23be5cce8599d4505bf9f0a9acf6a9"'
+      Location:
+      - https://api.github.com/repos/OCA-devel/test-repo-2
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - public_repo, repo
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E172:28E5095:65192A5A
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4991'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '9'
+      X-XSS-Protection:
+      - '0'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/orgs/OCA-devel/teams/test-team-2
+  response:
+    body:
+      string: '{"name":"test-team-2","id":8630747,"node_id":"T_kwDOByP5Bc4Ag7Hb","slug":"test-team-2","description":null,"privacy":"closed","notification_setting":"notifications_enabled","url":"https://api.github.com/organizations/119798021/team/8630747","html_url":"https://github.com/orgs/OCA-devel/teams/test-team-2","members_url":"https://api.github.com/organizations/119798021/team/8630747/members{/member}","repositories_url":"https://api.github.com/organizations/119798021/team/8630747/repos","permission":"pull","created_at":"2023-09-24T10:40:02Z","updated_at":"2023-09-24T10:40:02Z","members_count":2,"repos_count":0,"organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","url":"https://api.github.com/orgs/OCA-devel","repos_url":"https://api.github.com/orgs/OCA-devel/repos","events_url":"https://api.github.com/orgs/OCA-devel/events","hooks_url":"https://api.github.com/orgs/OCA-devel/hooks","issues_url":"https://api.github.com/orgs/OCA-devel/issues","members_url":"https://api.github.com/orgs/OCA-devel/members{/member}","public_members_url":"https://api.github.com/orgs/OCA-devel/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","description":null,"is_verified":false,"has_organization_projects":true,"has_repository_projects":true,"public_repos":8,"public_gists":0,"followers":0,"following":0,"html_url":"https://github.com/OCA-devel","created_at":"2022-12-04T14:00:16Z","updated_at":"2022-12-04T14:19:49Z","archived_at":null,"type":"Organization"},"parent":null}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:19 GMT
+      ETag:
+      - W/"020692a199ac599c1696204c7f0e5f83953cc232378358b29e41d4548fc231d2"
+      Last-Modified:
+      - Sun, 24 Sep 2023 10:40:02 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E51F:28E5443:65192A5B
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4990'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '10'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1529'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/organizations/119798021/team/8630747/repos?per_page=100
+  response:
+    body:
+      string: '[]'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Length:
+      - '2'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:19 GMT
+      ETag:
+      - '"a35d8b9cde680af0a2a294fc4d585191dc607dcfc323ab37aed2379a8cb65d02"'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E5CB:28E54F5:65192A5B
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4989'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '11'
+      X-XSS-Protection:
+      - '0'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"permission": "push"}'
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '22'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: PUT
+    uri: https://api.github.com/organizations/119798021/team/8630747/repos/OCA-devel/test-repo-2
+  response:
+    body:
+      string: ''
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Content-Security-Policy:
+      - default-src 'none'
+      Date:
+      - Sun, 01 Oct 2023 08:14:20 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E65F:28E558A:65192A5B
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4988'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '12'
+      X-XSS-Protection:
+      - '0'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: PUT
+    uri: https://api.github.com/repos/OCA-devel/test-repo-2/collaborators/simahawk
+  response:
+    body:
+      string: ''
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Content-Security-Policy:
+      - default-src 'none'
+      Date:
+      - Sun, 01 Oct 2023 08:14:20 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E767:28E5695:65192A5C
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4987'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '13'
+      X-XSS-Protection:
+      - '0'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/user
+  response:
+    body:
+      string: '{"login":"simahawk","id":347149,"node_id":"MDQ6VXNlcjM0NzE0OQ==","avatar_url":"https://avatars.githubusercontent.com/u/347149?v=4","gravatar_id":"","url":"https://api.github.com/users/simahawk","html_url":"https://github.com/simahawk","followers_url":"https://api.github.com/users/simahawk/followers","following_url":"https://api.github.com/users/simahawk/following{/other_user}","gists_url":"https://api.github.com/users/simahawk/gists{/gist_id}","starred_url":"https://api.github.com/users/simahawk/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/simahawk/subscriptions","organizations_url":"https://api.github.com/users/simahawk/orgs","repos_url":"https://api.github.com/users/simahawk/repos","events_url":"https://api.github.com/users/simahawk/events{/privacy}","received_events_url":"https://api.github.com/users/simahawk/received_events","type":"User","site_admin":false,"name":"Simone
+        Orsi","company":"@OCA @camptocamp","blog":"","location":"Rome","email":null,"hireable":null,"bio":"Full
+        stack senior python developer in love with open source.\r\nOCA board member.","twitter_username":null,"public_repos":132,"public_gists":40,"followers":88,"following":1,"created_at":"2010-07-28T16:13:38Z","updated_at":"2023-05-28T19:42:02Z"}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:20 GMT
+      ETag:
+      - W/"b7b06176be391be7e250cee63f9df0ef934733b61bfc25170209bb8f8b53ae86"
+      Last-Modified:
+      - Sun, 28 May 2023 19:42:02 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E875:28E57A1:65192A5C
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4986'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '14'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1262'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.github.v3.full+json
+      Accept-Charset:
+      - utf-8
+      Accept-Encoding:
+      - gzip, deflate, br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - github3.py/4.0.1
+    method: GET
+    uri: https://api.github.com/user
+  response:
+    body:
+      string: '{"login":"simahawk","id":347149,"node_id":"MDQ6VXNlcjM0NzE0OQ==","avatar_url":"https://avatars.githubusercontent.com/u/347149?v=4","gravatar_id":"","url":"https://api.github.com/users/simahawk","html_url":"https://github.com/simahawk","followers_url":"https://api.github.com/users/simahawk/followers","following_url":"https://api.github.com/users/simahawk/following{/other_user}","gists_url":"https://api.github.com/users/simahawk/gists{/gist_id}","starred_url":"https://api.github.com/users/simahawk/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/simahawk/subscriptions","organizations_url":"https://api.github.com/users/simahawk/orgs","repos_url":"https://api.github.com/users/simahawk/repos","events_url":"https://api.github.com/users/simahawk/events{/privacy}","received_events_url":"https://api.github.com/users/simahawk/received_events","type":"User","site_admin":false,"name":"Simone
+        Orsi","company":"@OCA @camptocamp","blog":"","location":"Rome","email":null,"hireable":null,"bio":"Full
+        stack senior python developer in love with open source.\r\nOCA board member.","twitter_username":null,"public_repos":132,"public_gists":40,"followers":88,"following":1,"created_at":"2010-07-28T16:13:38Z","updated_at":"2023-05-28T19:42:02Z"}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 08:14:20 GMT
+      ETag:
+      - W/"b7b06176be391be7e250cee63f9df0ef934733b61bfc25170209bb8f8b53ae86"
+      Last-Modified:
+      - Sun, 28 May 2023 19:42:02 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - ''
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; param=full; format=json
+      X-GitHub-Request-Id:
+      - 104C:FB98:285E92E:28E584F:65192A5C
+      X-OAuth-Scopes:
+      - admin:org, repo, workflow
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4985'
+      X-RateLimit-Reset:
+      - '1696151655'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '15'
+      X-XSS-Protection:
+      - '0'
+      content-length:
+      - '1262'
+      github-authentication-token-expiration:
+      - 2023-12-22 13:07:17 UTC
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+version: 1

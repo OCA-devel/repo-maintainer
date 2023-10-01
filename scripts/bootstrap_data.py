@@ -61,6 +61,7 @@ for repo in oca.repositories():
         "name": name,
         "psc": psc,
         "branches": [b.name for b in repo.branches()],
+        "default_branch": repo.default_branch,
     }
 
 with open("../conf/repo.yml", "w") as f:

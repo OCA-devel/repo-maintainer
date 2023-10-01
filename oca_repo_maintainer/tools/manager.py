@@ -4,18 +4,20 @@
 # @author: Simone Orsi
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
-
 import logging
 import shutil
 import subprocess
 import sys
 import tempfile
+from pathlib import Path
 from subprocess import CalledProcessError
 
 import copier
 import github3
 import yaml
 from github3.exceptions import NotFoundError
+
+from .utils import SmartDict
 
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.INFO)
@@ -26,7 +28,7 @@ logging.basicConfig(level=logging.INFO, handlers=[handler])
 _logger = logging.getLogger(__name__)
 
 
-def check_call(cmd, cwd, log_error=True, extra_cmd_args=False, env=None):
+def check_call(cmd, cwd=None, log_error=True, extra_cmd_args=False, env=None):
     if extra_cmd_args:
         cmd += extra_cmd_args
     cp = subprocess.run(
@@ -48,80 +50,28 @@ def check_call(cmd, cwd, log_error=True, extra_cmd_args=False, env=None):
 class RepoManager:
     """Setup and update repositories and teams."""
 
-    def __init__(self, conf_dir, org, token, test=False):
-        self.test = test
-        self.conf_dir = conf_dir
+    def __init__(self, conf_dir, org, token):
+        self.conf_dir = Path(conf_dir)
         self.token = token
         self.org = org
-        self.gh = github3.login(token=token)
-        self.gh_org = self.gh.organization(org)
-        with open("%s/global.yml" % self.conf_dir, "r") as f:
-            self.conf_data = yaml.safe_load(f.read())
+        self.conf_global = self._load_conf("global")
+        self.conf_psc = self._load_conf("psc")
+        self.conf_repo = self._load_conf("repo")
+        self.new_repo_template = self.conf_global.get("template")
 
-        with open("%s/psc.yml" % self.conf_dir, "r") as f:
-            self.psc_data = yaml.safe_load(f.read())
+    def _load_conf(self, name):
+        path = self.conf_dir / f"{name}.yml"
+        with path.open() as fd:
+            return SmartDict(yaml.safe_load(fd.read()))
 
-        with open("%s/repo.yml" % self.conf_dir, "r") as f:
-            self.repositories_data = yaml.safe_load(f.read())
-        self.new_repo_template = self.conf_data.get("template")
+    def run(self):
+        self._setup_gh()
+        self._process_psc()
+        self._process_repositories()
 
-    def create_branch(self, repo, gh_repo, version):
-        try:
-            clone_dir = tempfile.mkdtemp()
-            copier.run_copy(
-                self.new_repo_template,
-                clone_dir,
-                defaults=True,
-                unsafe=True,
-                data={
-                    "repo_name": repo,
-                    "repo_slug": repo,
-                    "repo_description": repo,
-                    "odoo_version": version,
-                },
-            )
-            check_call(
-                ["git", "init"],
-                cwd=clone_dir,
-            )
-            self._setup_user(clone_dir)
-            check_call(
-                ["git", "add", "-A"],
-                cwd=clone_dir,
-            )
-            check_call(
-                ["git", "commit", "-m", "Initial commit"],
-                cwd=clone_dir,
-            )
-            check_call(
-                ["git", "checkout", "-b", version],
-                cwd=clone_dir,
-            )
-            check_call(
-                ["git", "remote", "add", "origin", gh_repo.url],
-                cwd=clone_dir,
-            )
-            check_call(
-                [
-                    "git",
-                    "remote",
-                    "set-url",
-                    "--push",
-                    "origin",
-                    f"https://{self.token}@github.com/{self.org}/{repo}",
-                ],
-                cwd=clone_dir,
-            )
-            if not self.test:
-                check_call(
-                    ["git", "push", "origin", "HEAD"],
-                    cwd=clone_dir,
-                )
-        except CalledProcessError:
-            _logger.error("Something failed when the new repo was being created")
-            raise
-        finally:
-            shutil.rmtree(clone_dir)
+    def _setup_gh(self):
+        self.gh = github3.login(token=self.token)
+        self.gh_org = self.gh.organization(self.org)
 
     def _setup_user(self, clone_dir):
         """Ensure user is properly configured on current repo."""
@@ -131,7 +81,7 @@ class RepoManager:
         except CalledProcessError:
             name = None
         if not name:
-            check_call(
+            self._run_cmd(
                 ["git", "config", "user.name", gh_user.name or gh_user.login],
                 cwd=clone_dir,
             )
@@ -140,19 +90,19 @@ class RepoManager:
         except CalledProcessError:
             email = None
         if not email:
-            check_call(
-                ["git", "config", "user.name", gh_user.name or gh_user.login],
+            self._run_cmd(
+                ["git", "config", "user.email", gh_user.email],
                 cwd=clone_dir,
             )
 
     def _process_psc(self):
-        for team, data in self.psc_data.items():
+        for team, data in self.conf_psc.items():
             _logger.info("Generating team %s" % team)
             try:
                 gh_team = self.gh_org.team_by_name(team)
             except NotFoundError:
                 gh_team = self.gh_org.create_team(team, privacy="closed")
-            members = data.get("members", []) + self.conf_data["maintainers"]
+            members = data.get("members", []) + self.conf_global["maintainers"]
             representatives = data.get("representatives", [])
             done_members = []
             done_representatives = []
@@ -179,16 +129,16 @@ class RepoManager:
                     _logger.info("Adding membership to %s" % member)
                     gh_team.add_or_update_membership(member, role="maintainer")
 
-    def _process_org(self):
+    def _process_repositories(self):
         repositories = self.gh_org.repositories()
         repo_keys = [repo.name for repo in repositories]
-        gh_admin_team = self.gh_org.team_by_name(self.conf_data.get("owner"))
+        gh_admin_team = self.gh_org.team_by_name(self.conf_global.get("owner"))
         gh_maintainer_teams = [
             self.gh_org.team_by_name(maintainer_team)
-            for maintainer_team in self.conf_data.get("team_maintainers")
+            for maintainer_team in self.conf_global.get("team_maintainers")
         ]
         team_repos = {}
-        for repo, repo_data in self.repositories_data.items():
+        for repo, repo_data in self.conf_repo.items():
             if repo not in repo_keys:
                 gh_repo = self.gh_org.create_repository(
                     repo, repo, team_id=gh_admin_team.id
@@ -213,10 +163,72 @@ class RepoManager:
                 )
             for member in repo_data.get("maintainers", []):
                 gh_repo.add_collaborator(member)
-            for branch in repo_data.get("branches"):
+            for branch in sorted(repo_data.get("branches")):
                 if str(branch) not in repo_branches:
-                    self.create_branch(repo, gh_repo, str(branch))
+                    self._create_branch(gh_repo, str(branch))
+            branch = repo_data.get("default_branch")
+            if branch and gh_repo.default_branch != branch:
+                gh_repo.edit(name=gh_repo.name, default_branch=branch)
 
-    def run(self):
-        self._process_psc()
-        self._process_org()
+    def _create_branch(self, gh_repo, version):
+        clone_dir = tempfile.mkdtemp()
+        try:
+            self._init_branch(clone_dir, gh_repo, version)
+        except CalledProcessError:
+            _logger.error("Something failed when the new repo was being created")
+            raise
+        finally:
+            shutil.rmtree(clone_dir)
+
+    def _init_branch(self, clone_dir, gh_repo, version):
+        copier.run_copy(
+            self.new_repo_template,
+            clone_dir,
+            defaults=True,
+            unsafe=True,
+            data={
+                "repo_name": gh_repo.name,
+                "repo_slug": gh_repo.name,
+                "repo_description": gh_repo.name,
+                "odoo_version": version,
+            },
+        )
+        self._run_cmd(
+            ["git", "init"],
+            cwd=clone_dir,
+        )
+        self._setup_user(clone_dir)
+        self._run_cmd(
+            ["git", "add", "-A"],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "commit", "-m", "Initial commit"],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "checkout", "-b", version],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "remote", "add", "origin", gh_repo.url],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            [
+                "git",
+                "remote",
+                "set-url",
+                "--push",
+                "origin",
+                f"https://{self.token}@github.com/{self.org}/{gh_repo.name}",
+            ],
+            cwd=clone_dir,
+        )
+        self._run_cmd(
+            ["git", "push", "origin", "HEAD"],
+            cwd=clone_dir,
+        )
+
+    def _run_cmd(self, cmd, cwd, **kw):
+        check_call(cmd, cwd, **kw)
