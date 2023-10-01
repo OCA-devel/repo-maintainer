@@ -4,6 +4,7 @@
 # @author: Simone Orsi
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
+import hashlib
 import logging
 import shutil
 import subprocess
@@ -50,33 +51,73 @@ def check_call(cmd, cwd=None, log_error=True, extra_cmd_args=False, env=None):
 class RepoManager:
     """Setup and update repositories and teams."""
 
-    def __init__(self, conf_dir, org, token):
+    def __init__(self, conf_dir, org, token, force=False):
         self.conf_dir = Path(conf_dir)
         self.token = token
         self.org = org
+        self.force = force
+        self.checksum = {}
+        if not force:
+            self.checksum = self._load_conf("checksum", checksum=False)
         self.conf_global = self._load_conf("global")
         self.conf_psc = self._load_conf("psc")
         self.conf_repo = self._load_conf("repo")
         self.new_repo_template = self.conf_global.get("template")
 
-    def _load_conf(self, name):
+    def _load_conf(self, name, checksum=True):
         conf = {}
         path = self.conf_dir / name
-        if path.with_suffix(".yml").exists():
+        filepath = path.with_suffix(".yml")
+        if filepath.exists():
             # direct yml files
-            with path.with_suffix(".yml").open() as fd:
-                conf.update(yaml.safe_load(fd.read()))
+            conf.update(self._load_conf_from_file(filepath, checksum=checksum))
         else:
             # folders containing ymls
             for filepath in path.rglob("*.yml"):
-                with filepath.open() as fd:
-                    conf.update(yaml.safe_load(fd.read()))
+                conf.update(self._load_conf_from_file(filepath))
         return SmartDict(conf)
+
+    def _load_conf_from_file(self, filepath, checksum=True):
+        conf = {}
+        with filepath.open() as fd:
+            content = fd.read()
+            if not content:
+                return conf
+            if checksum and self._file_changed(filepath, content):
+                conf.update(yaml.safe_load(content))
+                self._store_checksum(filepath, content)
+            elif not checksum:
+                conf.update(yaml.safe_load(content))
+            else:
+                _logger.info(
+                    "%s not changed: skipping", self._filepath_for_checksum(filepath)
+                )
+        return conf
+
+    def _file_changed(self, filepath, content):
+        return self._make_md5(content) != self.checksum.get(
+            self._filepath_for_checksum(filepath)
+        )
+
+    def _make_md5(self, content):
+        return hashlib.md5(content.encode()).hexdigest()
+
+    def _save_checksum(self):
+        if self.checksum:
+            with open(self.conf_dir / "checksum.yml", "w") as f:
+                yaml.dump(dict(self.checksum), f)
+
+    def _store_checksum(self, filepath, content):
+        self.checksum[self._filepath_for_checksum(filepath)] = self._make_md5(content)
+
+    def _filepath_for_checksum(self, filepath):
+        return filepath.relative_to(self.conf_dir).as_posix()
 
     def run(self):
         self._setup_gh()
         self._process_psc()
         self._process_repositories()
+        self._store_checksum()
 
     def _setup_gh(self):
         self.gh = github3.login(token=self.token)
@@ -104,9 +145,12 @@ class RepoManager:
                 cwd=clone_dir,
             )
 
-    def _process_psc(self):
+    def _process_psc(self, foo=0):
+        if not self.conf_psc:
+            _logger.info("No team to process")
+            return
         for team, data in self.conf_psc.items():
-            _logger.info("Generating team %s" % team)
+            _logger.info("Processing team %s" % team)
             try:
                 gh_team = self.gh_org.team_by_name(team)
             except NotFoundError:
@@ -139,6 +183,9 @@ class RepoManager:
                     gh_team.add_or_update_membership(member, role="maintainer")
 
     def _process_repositories(self):
+        if not self.conf_repo:
+            _logger.info("No repo to process")
+            return
         repositories = self.gh_org.repositories()
         repo_keys = [repo.name for repo in repositories]
         gh_admin_team = self.gh_org.team_by_name(self.conf_global.get("owner"))
