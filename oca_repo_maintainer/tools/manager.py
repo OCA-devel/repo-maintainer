@@ -91,7 +91,7 @@ class RepoManager:
             email = None
         if not email:
             self._run_cmd(
-                ["git", "config", "user.name", gh_user.name or gh_user.login],
+                ["git", "config", "user.email", gh_user.email],
                 cwd=clone_dir,
             )
 

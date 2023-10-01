@@ -182,6 +182,8 @@ class TestManager(TestCase):
             with (
                 mock.patch.object(tempfile, "mkdtemp", mkdtemp),
                 mock.patch.object(RepoManager, "_run_cmd") as run_cmd,
+                # FIXME: this must be tested too
+                mock.patch.object(RepoManager, "_setup_user"),
                 mock.patch.object(copier, "run_copy") as run_copy,
             ):
                 self.manager._process_repositories()
