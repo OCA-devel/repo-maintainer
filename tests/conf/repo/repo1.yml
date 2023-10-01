@@ -9,13 +9,3 @@ test-repo-1:
   branches:
     - "16.0"
     - "15.0"
-# For testing: this repo must NOT exist to test creation
-test-repo-2:
-  name: Repository 2
-  description: Repo used to run real tests on oca-repo-manage tool.
-  psc: test-team-2
-  maintainers:
-    - simahawk
-  branches:
-    - "13.0"
-    - "12.0"
