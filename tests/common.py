@@ -15,4 +15,7 @@ cassettes_path = Path(__file__).parent / "cassettes"
 vcr = VCR(
     cassette_library_dir=cassettes_path.as_posix(),
     path_transformer=VCR.ensure_suffix(".yml"),
+    match_on=["method", "path", "query"],
+    filter_headers=["Authorization"],
+    decode_compressed_response=True,
 )
