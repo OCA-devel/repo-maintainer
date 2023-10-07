@@ -1,0 +1,12 @@
+# For testing: this repo must exist already
+# but have a different default branch
+test-repo-1:
+  name: Test repo 1
+  description: Repo used to run real tests on oca-repo-manage tool.
+  category: Logistics
+  psc: test-team-1
+  maintainers: []
+  default_branch: "16.0"
+  branches:
+    - "16.0"
+    - "15.0"

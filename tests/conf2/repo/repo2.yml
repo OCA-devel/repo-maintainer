@@ -1,0 +1,11 @@
+# For testing: this repo must NOT exist to test creation
+test-repo-2:
+  name: Repository 2
+  description: Repo used to run real tests on oca-repo-manage tool.
+  category: Accounting
+  psc: test-team-2
+  maintainers:
+    - simahawk
+  branches:
+    - "13.0"
+    - "12.0"

@@ -9,6 +9,7 @@ from pathlib import Path
 from vcr import VCR
 
 conf_path = Path(__file__).parent / "conf"
+conf_path2 = Path(__file__).parent / "conf2"
 cassettes_path = Path(__file__).parent / "cassettes"
 
 

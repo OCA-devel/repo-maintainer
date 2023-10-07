@@ -1,0 +1,4 @@
+owner: board
+template: git+https://github.com/OCA/oca-addons-repo-template
+team_maintainers: []
+maintainers: []
