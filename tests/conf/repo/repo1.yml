@@ -3,6 +3,7 @@
 test-repo-1:
   name: Test repo 1
   description: Repo used to run real tests on oca-repo-manage tool.
+  category: Logistics
   psc: test-team-1
   maintainers: []
   default_branch: "16.0"
