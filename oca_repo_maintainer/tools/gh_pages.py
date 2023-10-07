@@ -8,7 +8,7 @@
 
 from pathlib import Path
 
-import yaml
+from .utils import ConfLoader
 
 INDEX_HEADER = """
 OCA repositories
@@ -19,15 +19,11 @@ OCA repositories
 class GHPageGenerator:
     def __init__(self, conf_dir, org, page_folder):
         self.conf_dir = conf_dir
+        self.conf_loader = ConfLoader(conf_dir)
         self.org = org
-        with open("%s/global.yml" % self.conf_dir) as f:
-            self.global_conf = yaml.safe_load(f.read())
-
-        with open("%s/psc.yml" % self.conf_dir) as f:
-            self.psc_conf = yaml.safe_load(f.read())
-
-        with open("%s/repo.yml" % self.conf_dir) as f:
-            self.repo_conf = yaml.safe_load(f.read())
+        self.conf_global = self.conf_loader.load_conf("global")
+        self.conf_psc = self.conf_loader.load_conf("psc")
+        self.conf_repo = self.conf_loader.load_conf("repo")
         self.page_folder = page_folder
 
     def run(self):
@@ -38,8 +34,8 @@ class GHPageGenerator:
 
     def _generate_repo_page(self):
         section = ["Repositories", "============"]
-        org = self.global_conf["org"]
-        for repo_slug, data in self.repo_conf.items():
+        org = self.conf_global["org"]
+        for repo_slug, data in self.conf_repo.items():
             repo_name = data["name"]
             if repo_name is None:
                 continue
@@ -50,7 +46,7 @@ class GHPageGenerator:
             section.append("")
             if data.get("psc", False):
                 team_slug = data["psc"]
-                team = self.psc_conf[team_slug]["name"]
+                team = self.conf_psc[team_slug]["name"]
                 section.append(f"PSC: `{team} <teams.html#{team_slug}>`_")
                 section.append("")
             if data.get("maintainers"):
@@ -66,7 +62,7 @@ class GHPageGenerator:
 
     def _generate_psc_page(self):
         section = ["Teams", "====="]
-        for _psc_slug, data in self.psc_conf.items():
+        for _psc_slug, data in self.conf_psc.items():
             psc_name = data["name"]
             section.append(psc_name)
             section.append("*" * len(psc_name))
