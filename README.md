@@ -20,12 +20,14 @@ Features:
 
 Yes, you can. You just add the repo on your organization, add a secret called ORG_TOKEN on you secrets and modify the secrets with your information.
 
+## OCA configuration
+
+https://github.com/OCA-devel/repo-maintainer-conf
+
 
 ## Bootstrap
 
-Config files are located in `conf` folder in this project.
-To define the config of your repo edit files there.
-Alternatively, you can use the script `scripts/bootstrap_data.py` to generate the conf out of existing repos.
+You can use the script `scripts/bootstrap_data.py` to generate the conf out of existing repos.
 
 ## Licenses
 
