@@ -72,11 +72,15 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
             continue
         print("Processing repo", repo.name)
         psc = "board"
+        psc_rep = "board"
         try:
             for team in repo.teams():
-                if team.slug not in ["board"]:
+                if "maintainers" in team.slug and "representative" not in team.slug:
                     psc = team.slug
-                    break
+                    continue
+                if "maintainers" in team.slug and "representative" in team.slug:
+                    psc_rep = team.slug
+                    continue
         except github3.exceptions.NotFoundError:
             pass
         name = safe_name(repo)
@@ -89,6 +93,7 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
             "name": name,
             "category": category,
             "psc": psc,
+            "psc_rep": psc_rep,
             "branches": branches,
             "default_branch": repo.default_branch,
         }

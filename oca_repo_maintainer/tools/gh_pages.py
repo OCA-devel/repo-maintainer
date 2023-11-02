@@ -63,7 +63,14 @@ class GHPageGenerator:
                 if data.get("psc", False):
                     team_slug = data["psc"]
                     team = self.conf_psc[team_slug]["name"]
-                    section.append(f"PSC: `{team} <teams.html#{team_slug}>`_")
+                    section.append(f"Team: `{team} <teams.html#{team_slug}>`_")
+                    section.append("")
+                if data.get("psc_rep", False):
+                    team_slug = data["psc_rep"]
+                    team = self.conf_psc[team_slug]["name"]
+                    section.append(
+                        f"Team representatives: `{team} <teams.html#{team_slug}>`_"
+                    )
                     section.append("")
                 if data.get("maintainers"):
                     section.append("Members")
