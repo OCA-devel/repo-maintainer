@@ -18,8 +18,16 @@ import yaml
 TOKEN = os.getenv("GITHUB_TOKEN")
 
 
-def safe_name(name):
-    return name or " ".join([x.capitalize() for x in name.split("-")])
+def safe_name(repo):
+    name = repo.description or repo.name
+    return " ".join([x.capitalize() for x in name.split("-")])
+
+
+def is_valid_branch(string):
+    try:
+        return float(string)
+    except ValueError:
+        return False
 
 
 def prepare_psc(gh_org, conf_dir):
@@ -27,11 +35,12 @@ def prepare_psc(gh_org, conf_dir):
     if not dest_dir.exists():
         os.makedirs(dest_dir.as_posix())
     teams = gh_org.teams()
-    teams_data = {}
+    by_category = {}
     for team in teams:
         if team.slug in ["oca-contributors", "oca-members"]:
             continue
-        team_data = {"name": safe_name(team.name), "representatives": [], "members": []}
+        print("Processing team", team.slug)
+        team_data = {"name": safe_name(team), "representatives": [], "members": []}
         for member in team.members(role="member"):
             if member.login in ["oca-travis", "oca-transbot", "OCA-git-bot"]:
                 continue
@@ -40,40 +49,58 @@ def prepare_psc(gh_org, conf_dir):
             if member.login in ["oca-travis", "oca-transbot", "OCA-git-bot"]:
                 continue
             team_data["representatives"].append(member.login)
-        teams_data[team.slug] = team_data
 
-    for team_slug, team_data in teams_data.items():
-        with open(dest_dir / f"{team_slug}.yml", "w") as f:
-            yaml.dump({team_slug: team_data}, f)
+        category_slug = team.slug.split("-")[0]
+        if category_slug not in by_category:
+            by_category[category_slug] = {}
+        by_category[category_slug][team.slug] = team_data
+
+    for category_slug, teams_data in by_category.items():
+        with open(dest_dir / f"{category_slug}.yml", "w") as f:
+            yaml.dump(teams_data, f)
 
 
-def prepare_repo(gh_org, conf_dir):
+def prepare_repo(gh_org, conf_dir, whitelist=None):
     dest_dir = conf_dir / "repo"
     if not dest_dir.exists():
         os.makedirs(dest_dir.as_posix())
-    repos_data = {}
+    by_category = {}
     for repo in gh_org.repositories():
         if repo.name in (".github", "repo-maintainer", "repo-maintainer-conf"):
             continue
+        if whitelist and repo.name not in whitelist:
+            continue
+        print("Processing repo", repo.name)
         psc = "board"
+        psc_rep = "board"
         try:
             for team in repo.teams():
-                if team.slug not in ["board"]:
+                if "maintainers" in team.slug and "representative" not in team.slug:
                     psc = team.slug
-                    break
+                    continue
+                if "maintainers" in team.slug and "representative" in team.slug:
+                    psc_rep = team.slug
+                    continue
         except github3.exceptions.NotFoundError:
             pass
-        name = safe_name(repo.description)
-        repos_data[repo.name] = {
+        name = safe_name(repo)
+        branches = [b.name for b in repo.branches() if is_valid_branch(b.name)]
+        category = repo.name.split("-")[0].capitalize()
+        category_slug = category.lower()
+        if category_slug not in by_category:
+            by_category[category_slug] = {}
+        by_category[category_slug][repo.name] = {
             "name": name,
+            "category": category,
             "psc": psc,
-            "branches": [b.name for b in repo.branches()],
+            "psc_rep": psc_rep,
+            "branches": branches,
             "default_branch": repo.default_branch,
         }
 
-    for repo_slug, repo_data in repos_data.items():
-        with open(dest_dir / f"{repo_slug}.yml", "w") as f:
-            yaml.dump({repo_slug: repo_data}, f)
+    for category_slug, repos in by_category.items():
+        with open(dest_dir / f"{category_slug}.yml", "w") as f:
+            yaml.dump(repos, f)
 
 
 @click.command()
@@ -88,12 +115,15 @@ def prepare_repo(gh_org, conf_dir):
 @click.option(
     "--token", required=True, prompt="Your github token", envvar="GITHUB_TOKEN"
 )
-def generate(conf_dir, org, token):
+@click.option("--repo-whitelist", envvar="REPO_WHITELIST")
+def generate(conf_dir, org, token, repo_whitelist=None):
     gh = github3.login(token=token)
     gh_org = gh.organization(org)
     conf_dir = pathlib.Path(conf_dir)
+    if repo_whitelist:
+        repo_whitelist = [x.strip() for x in repo_whitelist.split(",")]
+    prepare_repo(gh_org, conf_dir, whitelist=repo_whitelist)
     prepare_psc(gh_org, conf_dir)
-    prepare_repo(gh_org, conf_dir)
 
 
 if __name__ == "__main__":

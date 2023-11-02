@@ -1,0 +1,7 @@
+test-team-2:
+  name: Test team 2
+  members:
+    - simahawk
+    - etobella
+  representatives:
+    - etobella
