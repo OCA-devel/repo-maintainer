@@ -20,13 +20,13 @@ class GHPageGenerator:
     def __init__(self, conf_dir, org, page_folder):
         self.conf_dir = conf_dir
         self.org = org
-        with open("%s/global.yml" % self.conf_dir, "r") as f:
+        with open("%s/global.yml" % self.conf_dir) as f:
             self.global_conf = yaml.safe_load(f.read())
 
-        with open("%s/psc.yml" % self.conf_dir, "r") as f:
+        with open("%s/psc.yml" % self.conf_dir) as f:
             self.psc_conf = yaml.safe_load(f.read())
 
-        with open("%s/repo.yml" % self.conf_dir, "r") as f:
+        with open("%s/repo.yml" % self.conf_dir) as f:
             self.repo_conf = yaml.safe_load(f.read())
         self.page_folder = page_folder
 
