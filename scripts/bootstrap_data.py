@@ -30,7 +30,7 @@ def is_valid_branch(string):
         return False
 
 
-def prepare_psc(gh_org, conf_dir):
+def prepare_psc(gh_org, conf_dir, whitelist=None):
     dest_dir = conf_dir / "psc"
     if not dest_dir.exists():
         os.makedirs(dest_dir.as_posix())
@@ -38,6 +38,8 @@ def prepare_psc(gh_org, conf_dir):
     by_category = {}
     for team in teams:
         if team.slug in ["oca-contributors", "oca-members"]:
+            continue
+        if whitelist and not any([team.slug.startswith(x) for x in whitelist]):
             continue
         print("Processing team", team.slug)
         team_data = {"name": safe_name(team), "representatives": [], "members": []}
@@ -65,10 +67,11 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
     if not dest_dir.exists():
         os.makedirs(dest_dir.as_posix())
     by_category = {}
+    teams = []
     for repo in gh_org.repositories():
         if repo.name in (".github", "repo-maintainer", "repo-maintainer-conf"):
             continue
-        if whitelist and repo.name not in whitelist:
+        if whitelist and not any([repo.name.startswith(x) for x in whitelist]):
             continue
         print("Processing repo", repo.name)
         psc = "board"
@@ -97,10 +100,14 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
             "branches": branches,
             "default_branch": repo.default_branch,
         }
+        teams.append(psc)
+        teams.append(psc_rep)
 
     for category_slug, repos in by_category.items():
         with open(dest_dir / f"{category_slug}.yml", "w") as f:
             yaml.dump(repos, f)
+
+    return dict(teams=teams)
 
 
 @click.command()
@@ -122,8 +129,11 @@ def generate(conf_dir, org, token, repo_whitelist=None):
     conf_dir = pathlib.Path(conf_dir)
     if repo_whitelist:
         repo_whitelist = [x.strip() for x in repo_whitelist.split(",")]
-    prepare_repo(gh_org, conf_dir, whitelist=repo_whitelist)
-    prepare_psc(gh_org, conf_dir)
+    repo_result = prepare_repo(gh_org, conf_dir, whitelist=repo_whitelist)
+    team_whitelist = None
+    if repo_whitelist:
+        team_whitelist = repo_result["teams"]
+    prepare_psc(gh_org, conf_dir, whitelist=team_whitelist)
 
 
 if __name__ == "__main__":
