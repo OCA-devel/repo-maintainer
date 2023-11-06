@@ -17,7 +17,7 @@ from ..tools.manager import RepoManager
 @click.option(
     # FIXME: switch to OCA when ready
     "--org",
-    default="OCA-devel",
+    default="OCA",
     prompt="Your organization",
     help="The organizattion.",
 )

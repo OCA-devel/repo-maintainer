@@ -114,7 +114,7 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
 @click.option(
     # FIXME: switch to OCA when ready
     "--org",
-    default="OCA-devel",
+    default="OCA",
     prompt="Your organization",
     help="The organizattion.",
 )

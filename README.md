@@ -1,8 +1,8 @@
 
-[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA-devel/repo-maintainer&target_branch=16.0)
-[![Pre-commit Status](https://github.com/OCA-devel/repo-maintainer/actions/workflows/pre-commit.yml/badge.svg?branch=16.0)](https://github.com/OCA-devel/repo-maintainer/actions/workflows/pre-commit.yml?query=branch%3A16.0)
-[![Build Status](https://github.com/OCA-devel/repo-maintainer/actions/workflows/test.yml/badge.svg?branch=16.0)](https://github.com/OCA-devel/repo-maintainer/actions/workflows/test.yml?query=branch%3A16.0)
-[![codecov](https://codecov.io/gh/OCA-devel/repo-maintainer/branch/16.0/graph/badge.svg)](https://codecov.io/gh/OCA-devel/repo-maintainer)
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/repo-maintainer&target_branch=16.0)
+[![Pre-commit Status](https://github.com/OCA/repo-maintainer/actions/workflows/pre-commit.yml/badge.svg?branch=16.0)](https://github.com/OCA/repo-maintainer/actions/workflows/pre-commit.yml?query=branch%3A16.0)
+[![Build Status](https://github.com/OCA/repo-maintainer/actions/workflows/test.yml/badge.svg?branch=16.0)](https://github.com/OCA/repo-maintainer/actions/workflows/test.yml?query=branch%3A16.0)
+[![codecov](https://codecov.io/gh/OCA/repo-maintainer/branch/16.0/graph/badge.svg)](https://codecov.io/gh/OCA/repo-maintainer)
 [![Translation Status](https://translation.odoo-community.org/widgets/repo-maintainer-16-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/repo-maintainer-16-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
@@ -22,7 +22,7 @@ Yes, you can. You just add the repo on your organization, add a secret called OR
 
 ## OCA configuration
 
-https://github.com/OCA-devel/repo-maintainer-conf
+https://github.com/OCA/repo-maintainer-conf
 
 
 ## Bootstrap

@@ -20,7 +20,7 @@ from .common import conf_path, conf_path2, vcr
 class TestManager(TestCase):
     def setUp(self):
         super().setUp()
-        self.org = "OCA-devel"
+        self.org = "OCA"
         # IMPORTANT: when you want to record or update cassettes
         # you  must replace this token w/ a real one before running tests.
         # SUPER IMPORTANT: after you do that,
@@ -102,9 +102,7 @@ class TestManager(TestCase):
     def test_setup_gh(self):
         self.manager._setup_gh()
         self.assertTrue(self.manager.gh)
-        self.assertEqual(
-            self.manager.gh_org.url, "https://api.github.com/orgs/OCA-devel"
-        )
+        self.assertEqual(self.manager.gh_org.url, "https://api.github.com/orgs/OCA")
 
     def test_process_psc(self):
         with vcr.use_cassette("setup_gh"):
@@ -115,7 +113,7 @@ class TestManager(TestCase):
         expected_requests = (
             # check the 1st team that already exists
             {
-                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-1",
+                "url": "https://api.github.com/orgs/OCA/teams/test-team-1",
                 "method": "GET",
             },
             # get members
@@ -136,12 +134,12 @@ class TestManager(TestCase):
             },
             # get team 2 which does NOT exist
             {
-                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-2",  # noqa
+                "url": "https://api.github.com/orgs/OCA/teams/test-team-2",  # noqa
                 "method": "GET",
             },
             # create team
             {
-                "url": "https://api.github.com/orgs/OCA-devel/teams",
+                "url": "https://api.github.com/orgs/OCA/teams",
                 "method": "POST",
                 "body": {
                     "name": "test-team-2",
@@ -229,27 +227,27 @@ class TestManager(TestCase):
         expected_requests = (
             # get repos
             {
-                "url": "https://api.github.com/orgs/OCA-devel/repos?per_page=100",
+                "url": "https://api.github.com/orgs/OCA/repos?per_page=100",
                 "method": "GET",
             },
             # get board team
             {
-                "url": "https://api.github.com/orgs/OCA-devel/teams/board",
+                "url": "https://api.github.com/orgs/OCA/teams/board",
                 "method": "GET",
             },
             # get repo
             {
-                "url": "https://api.github.com/repos/OCA-devel/test-repo-1",
+                "url": "https://api.github.com/repos/OCA/test-repo-1",
                 "method": "GET",
             },
             # get branches
             {
-                "url": "https://api.github.com/repos/OCA-devel/test-repo-1/branches?per_page=100",  # noqa
+                "url": "https://api.github.com/repos/OCA/test-repo-1/branches?per_page=100",  # noqa
                 "method": "GET",
             },
             # get team
             {
-                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-1",
+                "url": "https://api.github.com/orgs/OCA/teams/test-team-1",
                 "method": "GET",
             },
             # get team repos
@@ -259,13 +257,13 @@ class TestManager(TestCase):
             },
             # set default branch
             {
-                "url": "https://api.github.com/repos/OCA-devel/test-repo-1",
+                "url": "https://api.github.com/repos/OCA/test-repo-1",
                 "method": "PATCH",
                 "body": {"name": "test-repo-1", "default_branch": "16.0"},
             },
             # create repo 2
             {
-                "url": "https://api.github.com/orgs/OCA-devel/repos",
+                "url": "https://api.github.com/orgs/OCA/repos",
                 "method": "POST",
                 "body": {
                     "name": "test-repo-2",
@@ -283,7 +281,7 @@ class TestManager(TestCase):
             },
             # get team 2
             {
-                "url": "https://api.github.com/orgs/OCA-devel/teams/test-team-2",
+                "url": "https://api.github.com/orgs/OCA/teams/test-team-2",
                 "method": "GET",
             },
             # get team 2 repos
@@ -293,13 +291,13 @@ class TestManager(TestCase):
             },
             # set perm
             {
-                "url": "https://api.github.com/organizations/119798021/team/8630747/repos/OCA-devel/test-repo-2",  # noqa
+                "url": "https://api.github.com/organizations/119798021/team/8630747/repos/OCA/test-repo-2",  # noqa
                 "method": "PUT",
                 "body": {"permission": "push"},
             },
             # set user on repo
             {
-                "url": "https://api.github.com/repos/OCA-devel/test-repo-2/collaborators/simahawk",  # noqa
+                "url": "https://api.github.com/repos/OCA/test-repo-2/collaborators/simahawk",  # noqa
                 "method": "PUT",
                 "body": None,
             },
@@ -367,7 +365,7 @@ class TestManager(TestCase):
                     "remote",
                     "add",
                     "origin",
-                    "https://api.github.com/repos/OCA-devel/test-repo-2",
+                    "https://api.github.com/repos/OCA/test-repo-2",
                 ],
                 "kw": {
                     "cwd": clone_dir,
@@ -380,7 +378,7 @@ class TestManager(TestCase):
                     "set-url",
                     "--push",
                     "origin",
-                    f"https://{self.token}@github.com/OCA-devel/test-repo-2",
+                    f"https://{self.token}@github.com/OCA/test-repo-2",
                 ],
                 "kw": {
                     "cwd": clone_dir,

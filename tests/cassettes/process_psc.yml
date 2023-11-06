@@ -17,7 +17,7 @@ interactions:
         User-Agent:
           - github3.py/4.0.1
       method: GET
-      uri: https://api.github.com/orgs/OCA-devel/teams/test-team-1
+      uri: https://api.github.com/orgs/OCA/teams/test-team-1
     response:
       body:
         string: !!binary |
@@ -374,7 +374,7 @@ interactions:
         User-Agent:
           - github3.py/4.0.1
       method: GET
-      uri: https://api.github.com/orgs/OCA-devel/teams/test-team-2
+      uri: https://api.github.com/orgs/OCA/teams/test-team-2
     response:
       body:
         string: !!binary |
@@ -459,10 +459,10 @@ interactions:
         User-Agent:
           - github3.py/4.0.1
       method: POST
-      uri: https://api.github.com/orgs/OCA-devel/teams
+      uri: https://api.github.com/orgs/OCA/teams
     response:
       body:
-        string: '{"name":"test-team-2","id":8630747,"node_id":"T_kwDOByP5Bc4Ag7Hb","slug":"test-team-2","description":null,"privacy":"closed","notification_setting":"notifications_enabled","url":"https://api.github.com/organizations/119798021/team/8630747","html_url":"https://github.com/orgs/OCA-devel/teams/test-team-2","members_url":"https://api.github.com/organizations/119798021/team/8630747/members{/member}","repositories_url":"https://api.github.com/organizations/119798021/team/8630747/repos","permission":"pull","parent":null,"created_at":"2023-09-24T10:40:02Z","updated_at":"2023-09-24T10:40:02Z","members_count":1,"repos_count":0,"organization":{"login":"OCA-devel","id":119798021,"node_id":"O_kgDOByP5BQ","url":"https://api.github.com/orgs/OCA-devel","repos_url":"https://api.github.com/orgs/OCA-devel/repos","events_url":"https://api.github.com/orgs/OCA-devel/events","hooks_url":"https://api.github.com/orgs/OCA-devel/hooks","issues_url":"https://api.github.com/orgs/OCA-devel/issues","members_url":"https://api.github.com/orgs/OCA-devel/members{/member}","public_members_url":"https://api.github.com/orgs/OCA-devel/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","description":null,"is_verified":false,"has_organization_projects":true,"has_repository_projects":true,"public_repos":6,"public_gists":0,"followers":0,"following":0,"html_url":"https://github.com/OCA-devel","created_at":"2022-12-04T14:00:16Z","updated_at":"2022-12-04T14:19:49Z","archived_at":null,"type":"Organization"}}'
+        string: '{"name":"test-team-2","id":8630747,"node_id":"T_kwDOByP5Bc4Ag7Hb","slug":"test-team-2","description":null,"privacy":"closed","notification_setting":"notifications_enabled","url":"https://api.github.com/organizations/119798021/team/8630747","html_url":"https://github.com/orgs/OCA/teams/test-team-2","members_url":"https://api.github.com/organizations/119798021/team/8630747/members{/member}","repositories_url":"https://api.github.com/organizations/119798021/team/8630747/repos","permission":"pull","parent":null,"created_at":"2023-09-24T10:40:02Z","updated_at":"2023-09-24T10:40:02Z","members_count":1,"repos_count":0,"organization":{"login":"OCA","id":119798021,"node_id":"O_kgDOByP5BQ","url":"https://api.github.com/orgs/OCA","repos_url":"https://api.github.com/orgs/OCA/repos","events_url":"https://api.github.com/orgs/OCA/events","hooks_url":"https://api.github.com/orgs/OCA/hooks","issues_url":"https://api.github.com/orgs/OCA/issues","members_url":"https://api.github.com/orgs/OCA/members{/member}","public_members_url":"https://api.github.com/orgs/OCA/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/119798021?v=4","description":null,"is_verified":false,"has_organization_projects":true,"has_repository_projects":true,"public_repos":6,"public_gists":0,"followers":0,"following":0,"html_url":"https://github.com/OCA","created_at":"2022-12-04T14:00:16Z","updated_at":"2022-12-04T14:19:49Z","archived_at":null,"type":"Organization"}}'
       headers:
         Access-Control-Allow-Origin:
           - "*"

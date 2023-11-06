@@ -25,8 +25,6 @@ class ConfLoader:
     def __init__(self, conf_dir):
         self.conf_dir = Path(conf_dir)
         self.checksum = self._load_checksum()
-        print("CHECKSUM")
-        print(self.checksum)
 
     def _load_checksum(self):
         return self.load_conf("checksum", checksum=False)
