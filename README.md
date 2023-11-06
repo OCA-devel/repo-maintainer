@@ -27,7 +27,7 @@ https://github.com/OCA/repo-maintainer-conf
 
 ## Bootstrap
 
-You can use the script `scripts/bootstrap_data.py` to generate the conf out of existing repos.
+You can use the script `scripts/bootstrap_data.py` to generate the conf out of existing repos. Run it with `--help` to see the options.
 
 ## Licenses
 
