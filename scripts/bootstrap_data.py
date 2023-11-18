@@ -68,7 +68,7 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
         os.makedirs(dest_dir.as_posix())
     by_category = {}
     teams = []
-    for repo in gh_org.repositories():
+    for repo in sorted(gh_org.repositories(), key=lambda x: x.name):
         if repo.name in (".github", "repo-maintainer", "repo-maintainer-conf"):
             continue
         if whitelist and not any([repo.name.startswith(x) for x in whitelist]):
