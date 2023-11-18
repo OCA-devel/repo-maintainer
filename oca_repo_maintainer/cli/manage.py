@@ -21,8 +21,9 @@ from ..tools.manager import RepoManager
     prompt="Your organization",
     help="The organizattion.",
 )
-def manage(conf_dir, org, token):
-    RepoManager(conf_dir, org, token).run()
+@click.option("--force", is_flag=True, default=False)
+def manage(conf_dir, org, token, force):
+    RepoManager(conf_dir, org, token, force=force).run()
 
 
 if __name__ == "__main__":
