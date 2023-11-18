@@ -78,11 +78,15 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
         psc_rep = "board"
         try:
             for team in repo.teams():
+                if "core" in team.slug:
+                    continue
                 if "maintainers" in team.slug and "representative" not in team.slug:
                     psc = team.slug
+                    teams.append(psc)
                     continue
                 if "maintainers" in team.slug and "representative" in team.slug:
                     psc_rep = team.slug
+                    teams.append(psc_rep)
                     continue
         except github3.exceptions.NotFoundError:
             pass
@@ -100,8 +104,6 @@ def prepare_repo(gh_org, conf_dir, whitelist=None):
             "branches": branches,
             "default_branch": repo.default_branch,
         }
-        teams.append(psc)
-        teams.append(psc_rep)
 
     for category_slug, repos in by_category.items():
         with open(dest_dir / f"{category_slug}.yml", "w") as f:
