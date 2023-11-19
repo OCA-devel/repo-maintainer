@@ -21,9 +21,9 @@ class GHPageGenerator:
         self.conf_dir = conf_dir
         self.conf_loader = ConfLoader(conf_dir)
         self.org = org
-        self.conf_global = self.conf_loader.load_conf("global")
-        self.conf_psc = self.conf_loader.load_conf("psc")
-        self.conf_repo = self.conf_loader.load_conf("repo")
+        self.conf_global = self.conf_loader.load_conf("global", checksum=False)
+        self.conf_psc = self.conf_loader.load_conf("psc", checksum=False)
+        self.conf_repo = self.conf_loader.load_conf("repo", checksum=False)
         self.page_folder = page_folder
 
     def run(self):
