@@ -21,9 +21,9 @@ class GHPageGenerator:
         self.conf_dir = conf_dir
         self.conf_loader = ConfLoader(conf_dir)
         self.org = org
-        self.conf_global = self.conf_loader.load_conf("global")
-        self.conf_psc = self.conf_loader.load_conf("psc")
-        self.conf_repo = self.conf_loader.load_conf("repo")
+        self.conf_global = self.conf_loader.load_conf("global", checksum=False)
+        self.conf_psc = self.conf_loader.load_conf("psc", checksum=False)
+        self.conf_repo = self.conf_loader.load_conf("repo", checksum=False)
         self.page_folder = page_folder
 
     def run(self):
@@ -42,6 +42,8 @@ class GHPageGenerator:
         for repo_slug, data in self.conf_repo.items():
             cat = data.get("category") or "Uncategorized"
             res.setdefault(cat, []).append((repo_slug, data))
+        for categ, repos in res.items():
+            res[categ] = sorted(repos)
         return res
 
     def _generate_repo_pages(self):
@@ -79,6 +81,9 @@ class GHPageGenerator:
                     for member in self._link_users(*data["maintainers"]):
                         section.append("* " + member)
                     section.append("")
+                if repo_slug != repos[-1][0]:
+                    # add horiz separator except for the last one
+                    section.append("\n----\n")
                 content = "\n".join(section)
                 self.write(content, Path(f"docsource/{categ.lower()}.rst"))
 
@@ -87,10 +92,10 @@ Repositories
 ============
 
 .. toctree::
-   :maxdepth: 1
+
 
 """
-        categories = list(repo_by_category.keys())
+        categories = sorted(repo_by_category.keys())
         no_cat = "Uncategorized"
         if no_cat in categories:
             # move uncategorized repos at the end
@@ -98,13 +103,15 @@ Repositories
             categories.append(no_cat)
 
         for categ in categories:
-            content += f"   {categ.lower()}\n"
+            content += f"   {categ.lower()}.rst\n"
         self.write(content, Path("docsource/repos.rst"))
 
     def _generate_psc_pages(self):
         section = ["Teams", "====="]
-        for _psc_slug, data in self.conf_psc.items():
-            psc_name = data["name"]
+        psc_data = sorted(
+            [(data["name"], slug, data) for slug, data in self.conf_psc.items()]
+        )
+        for psc_name, ___, data in psc_data:
             section.append(psc_name)
             section.append("*" * len(psc_name))
             section.append("")
@@ -119,7 +126,9 @@ Repositories
             section.append("")
             for member in self._link_users(*data["representatives"]):
                 section.append("* " + member)
-            section.append("")
+            if psc_name != psc_data[-1][0]:
+                # add horiz separator except for the last one
+                section.append("\n----\n")
         content = "\n".join(section)
         self.write(content, Path("docsource/teams.rst"))
 
