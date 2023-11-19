@@ -81,6 +81,9 @@ class GHPageGenerator:
                     for member in self._link_users(*data["maintainers"]):
                         section.append("* " + member)
                     section.append("")
+                if repo_slug != repos[-1][0]:
+                    # add horiz separator except for the last one
+                    section.append("\n----\n")
                 content = "\n".join(section)
                 self.write(content, Path(f"docsource/{categ.lower()}.rst"))
 
@@ -105,9 +108,10 @@ Repositories
 
     def _generate_psc_pages(self):
         section = ["Teams", "====="]
-        psc_data = [(data["name"], slug, data) for slug, data in self.conf_psc.items()]
-        for __, ___, data in sorted(psc_data):
-            psc_name = data["name"]
+        psc_data = sorted(
+            [(data["name"], slug, data) for slug, data in self.conf_psc.items()]
+        )
+        for psc_name, ___, data in psc_data:
             section.append(psc_name)
             section.append("*" * len(psc_name))
             section.append("")
@@ -122,7 +126,9 @@ Repositories
             section.append("")
             for member in self._link_users(*data["representatives"]):
                 section.append("* " + member)
-            section.append("")
+            if psc_name != psc_data[-1][0]:
+                # add horiz separator except for the last one
+                section.append("\n----\n")
         content = "\n".join(section)
         self.write(content, Path("docsource/teams.rst"))
 
