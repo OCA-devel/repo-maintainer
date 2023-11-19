@@ -42,6 +42,8 @@ class GHPageGenerator:
         for repo_slug, data in self.conf_repo.items():
             cat = data.get("category") or "Uncategorized"
             res.setdefault(cat, []).append((repo_slug, data))
+        for categ, repos in res.items():
+            res[categ] = sorted(repos)
         return res
 
     def _generate_repo_pages(self):
@@ -87,10 +89,10 @@ Repositories
 ============
 
 .. toctree::
-   :maxdepth: 1
+
 
 """
-        categories = list(repo_by_category.keys())
+        categories = sorted(repo_by_category.keys())
         no_cat = "Uncategorized"
         if no_cat in categories:
             # move uncategorized repos at the end
@@ -98,12 +100,13 @@ Repositories
             categories.append(no_cat)
 
         for categ in categories:
-            content += f"   {categ.lower()}\n"
+            content += f"   {categ.lower()}.rst\n"
         self.write(content, Path("docsource/repos.rst"))
 
     def _generate_psc_pages(self):
         section = ["Teams", "====="]
-        for _psc_slug, data in self.conf_psc.items():
+        psc_data = [(data["name"], slug, data) for slug, data in self.conf_psc.items()]
+        for __, ___, data in sorted(psc_data):
             psc_name = data["name"]
             section.append(psc_name)
             section.append("*" * len(psc_name))
