@@ -15,7 +15,6 @@ from ..tools.manager import RepoManager
     "--token", required=True, prompt="Your github token", envvar="GITHUB_TOKEN"
 )
 @click.option(
-    # FIXME: switch to OCA when ready
     "--org",
     default="OCA",
     prompt="Your organization",
