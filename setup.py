@@ -61,6 +61,7 @@ setup(
     entry_points={
         "console_scripts": [
             "oca-repo-manage = oca_repo_maintainer.cli.manage:manage",
+            "oca-repo-add-branch = oca_repo_maintainer.cli.manage:add_branch",
             "oca-repo-pages = oca_repo_maintainer.cli.pages:pages",
         ]
     },
