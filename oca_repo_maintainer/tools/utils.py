@@ -29,17 +29,25 @@ class ConfLoader:
     def _load_checksum(self):
         return self.load_conf("checksum", checksum=False)
 
-    def load_conf(self, name, checksum=True):
+    def load_conf(self, name, checksum=True, by_filepath=False):
         conf = {}
         path = self.conf_dir / name
         filepath = path.with_suffix(".yml")
         if filepath.exists():
             # direct yml files
-            conf.update(self._load_conf_from_file(filepath, checksum=checksum))
+            data = self._load_conf_from_file(filepath, checksum=checksum)
+            if by_filepath:
+                conf[filepath] = data
+            else:
+                conf.update(data)
         else:
             # folders containing ymls
             for filepath in path.rglob("*.yml"):
-                conf.update(self._load_conf_from_file(filepath, checksum=checksum))
+                data = self._load_conf_from_file(filepath, checksum=checksum)
+                if by_filepath:
+                    conf[filepath] = data
+                else:
+                    conf.update(data)
         return SmartDict(conf)
 
     def _load_conf_from_file(self, filepath, checksum=True):
