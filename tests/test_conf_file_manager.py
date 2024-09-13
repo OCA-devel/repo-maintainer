@@ -77,3 +77,38 @@ class TestManager(TestCase):
             self.assertEqual(
                 conf["test-repo-for-tools-with-no-branches"]["default_branch"], "master"
             )
+
+    def test_skip_manual_mgmt(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            shutil.copytree(
+                conf_path_with_tools.as_posix(), temp_dir, dirs_exist_ok=True
+            )
+            manager = ConfFileManager(temp_dir)
+            conf = manager.conf_loader.load_conf("repo")
+
+            self.assertEqual(conf["test-repo-for-addons"]["branches"], ["16.0", "15.0"])
+            self.assertEqual(conf["test-repo-for-addons"]["default_branch"], "16.0")
+            self.assertEqual(
+                conf["test-repo-for-addons-manual"]["branches"], ["16.0", "15.0"]
+            )
+            self.assertEqual(
+                conf["test-repo-for-addons-manual"]["default_branch"], "16.0"
+            )
+            self.assertEqual(
+                conf["test-repo-for-addons-manual"]["manual_branch_mgmt"], True
+            )
+
+            manager.add_branch("100.0")
+
+            conf = manager.conf_loader.load_conf("repo")
+
+            self.assertEqual(
+                conf["test-repo-for-addons"]["branches"], ["16.0", "15.0", "100.0"]
+            )
+            self.assertEqual(conf["test-repo-for-addons"]["default_branch"], "100.0")
+            self.assertEqual(
+                conf["test-repo-for-addons-manual"]["branches"], ["16.0", "15.0"]
+            )
+            self.assertEqual(
+                conf["test-repo-for-addons-manual"]["default_branch"], "16.0"
+            )

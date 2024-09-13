@@ -67,6 +67,8 @@ Go to the conf repo on your file system and run this:
 
 Review, stage all the changes, commit and open a PR.
 
+You can prevent this tool to edit a repo by adding ``manual_branch_mgmt`` boolean flag to repo's conf.
+
 ## Licenses
 
 This repository is licensed under [AGPL-3.0](LICENSE).
