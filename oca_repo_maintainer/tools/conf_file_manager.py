@@ -37,12 +37,14 @@ class ConfFileManager:
             self.conf_loader.save_conf(filepath, repo)
             _logger.info("Branch %s added to %s.", branch, filepath.as_posix())
 
+    frozen_branches = ("master", "main")
+
     def _can_add_new_branch(self, branch, repo_data):
         branches = repo_data["branches"]
         return (
             branch not in branches
-            and "master" not in branches
-            and repo_data.get("default_branch") != "master"
+            and all(x not in branches for x in self.frozen_branches)
+            and repo_data.get("default_branch") not in self.frozen_branches
         )
 
     def _can_change_default_branch(self, repo_data):
@@ -51,5 +53,5 @@ class ConfFileManager:
             "default_branch" in repo_data
             # If the branch is "master" it means this is likely the repo of a tool
             # and we have only one working branch.
-            and repo_data["default_branch"] != "master"
+            and repo_data["default_branch"] not in self.frozen_branches
         )

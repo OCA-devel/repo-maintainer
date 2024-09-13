@@ -48,8 +48,10 @@ class TestManager(TestCase):
 
             self.assertEqual(conf["test-repo-for-addons"]["branches"], ["16.0", "15.0"])
             self.assertEqual(conf["test-repo-for-addons"]["default_branch"], "16.0")
-            self.assertEqual(conf["test-repo-for-tools"]["branches"], ["master"])
-            self.assertEqual(conf["test-repo-for-tools"]["default_branch"], "master")
+            self.assertEqual(conf["test-repo-for-tools-1"]["branches"], ["master"])
+            self.assertEqual(conf["test-repo-for-tools-1"]["default_branch"], "master")
+            self.assertEqual(conf["test-repo-for-tools-2"]["branches"], [])
+            self.assertEqual(conf["test-repo-for-tools-2"]["default_branch"], "main")
             self.assertEqual(
                 conf["test-repo-for-tools-with-no-branches"]["branches"], []
             )
@@ -65,8 +67,10 @@ class TestManager(TestCase):
                 conf["test-repo-for-addons"]["branches"], ["16.0", "15.0", "100.0"]
             )
             self.assertEqual(conf["test-repo-for-addons"]["default_branch"], "100.0")
-            self.assertEqual(conf["test-repo-for-tools"]["branches"], ["master"])
-            self.assertEqual(conf["test-repo-for-tools"]["default_branch"], "master")
+            self.assertEqual(conf["test-repo-for-tools-1"]["branches"], ["master"])
+            self.assertEqual(conf["test-repo-for-tools-1"]["default_branch"], "master")
+            self.assertEqual(conf["test-repo-for-tools-2"]["branches"], [])
+            self.assertEqual(conf["test-repo-for-tools-2"]["default_branch"], "main")
             self.assertEqual(
                 conf["test-repo-for-tools-with-no-branches"]["branches"], []
             )

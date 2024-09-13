@@ -1,6 +1,6 @@
 # For testing: this repo must NOT exist to test creation
-test-repo-for-tools:
-  name: Repository for tools
+test-repo-for-tools-1:
+  name: Repository for tools with branch = master
   description: Repo used to run real tests on oca-repo-manage tool.
   category: Accounting
   psc: test-team-2
@@ -9,6 +9,15 @@ test-repo-for-tools:
   default_branch: "master"
   branches:
     - "master"
+test-repo-for-tools-2:
+  name: Repository for tools with branch = main
+  description: Repo used to run real tests on oca-repo-manage tool.
+  category: Accounting
+  psc: test-team-2
+  maintainers:
+    - simahawk
+  default_branch: "main"
+  branches: []
 test-repo-for-tools-with-no-branches:
   name: Repository for tools
   description: Repo used to run real tests on oca-repo-manage tool.
