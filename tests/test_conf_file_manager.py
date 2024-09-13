@@ -8,7 +8,7 @@ from unittest import TestCase
 
 from oca_repo_maintainer.tools.conf_file_manager import ConfFileManager
 
-from .common import conf_path
+from .common import conf_path, conf_path_with_tools
 
 
 class TestManager(TestCase):
@@ -37,3 +37,39 @@ class TestManager(TestCase):
                 self.assertIn("100.0", repo_data["branches"])
                 if "default_branch" in repo_data:
                     self.assertNotEqual(repo_data["default_branch"], "100.0")
+
+    def test_preserve_master(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            shutil.copytree(
+                conf_path_with_tools.as_posix(), temp_dir, dirs_exist_ok=True
+            )
+            manager = ConfFileManager(temp_dir)
+            conf = manager.conf_loader.load_conf("repo")
+
+            self.assertEqual(conf["test-repo-for-addons"]["branches"], ["16.0", "15.0"])
+            self.assertEqual(conf["test-repo-for-addons"]["default_branch"], "16.0")
+            self.assertEqual(conf["test-repo-for-tools"]["branches"], ["master"])
+            self.assertEqual(conf["test-repo-for-tools"]["default_branch"], "master")
+            self.assertEqual(
+                conf["test-repo-for-tools-with-no-branches"]["branches"], []
+            )
+            self.assertEqual(
+                conf["test-repo-for-tools-with-no-branches"]["default_branch"], "master"
+            )
+
+            manager.add_branch("100.0")
+
+            conf = manager.conf_loader.load_conf("repo")
+
+            self.assertEqual(
+                conf["test-repo-for-addons"]["branches"], ["16.0", "15.0", "100.0"]
+            )
+            self.assertEqual(conf["test-repo-for-addons"]["default_branch"], "100.0")
+            self.assertEqual(conf["test-repo-for-tools"]["branches"], ["master"])
+            self.assertEqual(conf["test-repo-for-tools"]["default_branch"], "master")
+            self.assertEqual(
+                conf["test-repo-for-tools-with-no-branches"]["branches"], []
+            )
+            self.assertEqual(
+                conf["test-repo-for-tools-with-no-branches"]["default_branch"], "master"
+            )

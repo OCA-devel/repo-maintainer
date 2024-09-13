@@ -10,6 +10,7 @@ from vcr import VCR
 
 conf_path = Path(__file__).parent / "conf"
 conf_path2 = Path(__file__).parent / "conf2"
+conf_path_with_tools = Path(__file__).parent / "conf_with_tools"
 cassettes_path = Path(__file__).parent / "cassettes"
 
 

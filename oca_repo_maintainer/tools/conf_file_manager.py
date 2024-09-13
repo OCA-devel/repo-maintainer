@@ -30,9 +30,26 @@ class ConfFileManager:
         """Add a branch to all repositories in the configuration."""
         for filepath, repo in self.conf_repo.items():
             for repo_data in repo.values():
-                if branch not in repo_data["branches"]:
+                if self._can_add_new_branch(branch, repo_data):
                     repo_data["branches"].append(branch)
-                if default:
+                if default and self._can_change_default_branch(repo_data):
                     repo_data["default_branch"] = branch
             self.conf_loader.save_conf(filepath, repo)
             _logger.info("Branch %s added to %s.", branch, filepath.as_posix())
+
+    def _can_add_new_branch(self, branch, repo_data):
+        branches = repo_data["branches"]
+        return (
+            branch not in branches
+            and "master" not in branches
+            and repo_data.get("default_branch") != "master"
+        )
+
+    def _can_change_default_branch(self, repo_data):
+        return (
+            # Only change if default branch is controlled via config file
+            "default_branch" in repo_data
+            # If the branch is "master" it means this is likely the repo of a tool
+            # and we have only one working branch.
+            and repo_data["default_branch"] != "master"
+        )
