@@ -50,6 +50,16 @@ class ConfLoader:
                     conf.update(data)
         return SmartDict(conf)
 
+    def save_conf(self, filepath, conf):
+        # TODO Use ruamel.yaml to keep the original format of the file.
+        # Yet, is not critical for now, because the pre-commit conf
+        # on repo-maintainer-conf will take care of it.
+        # However, it would be nice to have it here too.
+        with filepath.open("w") as f:
+            # at least keep the quotes consistent, you silly pyyaml
+            txt = yaml.dump(conf).replace(*"'", *'"')
+            f.write(txt)
+
     def _load_conf_from_file(self, filepath, checksum=True):
         conf = {}
         with filepath.open() as fd:
