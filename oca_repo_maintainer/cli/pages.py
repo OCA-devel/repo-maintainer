@@ -13,7 +13,6 @@ from ..tools.gh_pages import GHPageGenerator
 @click.option("--conf-dir", required=True, help="Folder where configuration is stored")
 @click.option("--path", required=True, help="Folder where pages must be generated")
 @click.option(
-    # FIXME: switch to OCA when ready
     "--org",
     default="OCA",
     prompt="Your organization",

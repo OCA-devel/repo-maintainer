@@ -29,18 +29,36 @@ class ConfLoader:
     def _load_checksum(self):
         return self.load_conf("checksum", checksum=False)
 
-    def load_conf(self, name, checksum=True):
+    def load_conf(self, name, checksum=True, by_filepath=False):
         conf = {}
         path = self.conf_dir / name
         filepath = path.with_suffix(".yml")
         if filepath.exists():
             # direct yml files
-            conf.update(self._load_conf_from_file(filepath, checksum=checksum))
+            data = self._load_conf_from_file(filepath, checksum=checksum)
+            if by_filepath:
+                conf[filepath] = data
+            else:
+                conf.update(data)
         else:
             # folders containing ymls
             for filepath in path.rglob("*.yml"):
-                conf.update(self._load_conf_from_file(filepath, checksum=checksum))
+                data = self._load_conf_from_file(filepath, checksum=checksum)
+                if by_filepath:
+                    conf[filepath] = data
+                else:
+                    conf.update(data)
         return SmartDict(conf)
+
+    def save_conf(self, filepath, conf):
+        # TODO Use ruamel.yaml to keep the original format of the file.
+        # Yet, is not critical for now, because the pre-commit conf
+        # on repo-maintainer-conf will take care of it.
+        # However, it would be nice to have it here too.
+        with filepath.open("w") as f:
+            # at least keep the quotes consistent, you silly pyyaml
+            txt = yaml.dump(conf).replace(*"'", *'"')
+            f.write(txt)
 
     def _load_conf_from_file(self, filepath, checksum=True):
         conf = {}

@@ -15,6 +15,14 @@ Features:
 * create/update repositories
 * create/update teams and roles
 * create/update branches
+* add new branches to existing YAML conf
+
+
+## Available tools
+
+* ``oca-repo-manage`` used to automatically maintain repositories based on YAML conf (see OCA conf below)
+* ``oca-repo-pages`` used to automatically generate repo inventory docs from the same YAML conf
+* ``oca-repo-add-branch`` used to manually add new branches to existing conf
 
 ## I can use it on my own organization?
 
@@ -28,6 +36,38 @@ https://github.com/OCA/repo-maintainer-conf
 ## Bootstrap
 
 You can use the script `scripts/bootstrap_data.py` to generate the conf out of existing repos. Run it with `--help` to see the options.
+
+# Usage
+
+## Manage repos
+
+This action is normally performed via GH actions in the conf repo. You should not run it manually.
+
+Yet, here's the command:
+
+
+    oca-repo-manage --org $GITHUB_REPOSITORY_OWNER --token ${{secrets.GIT_PUSH_TOKEN}} --conf-dir ./conf
+
+## Generate docs
+
+This action is normally performed via GH actions in the conf repo. You should not run it manually.
+
+Yet, here's the command:
+
+    oca-repo-pages --org $GITHUB_REPOSITORY_OWNER --conf-dir conf --path docsource
+
+## Add new branches to all repos
+
+This action has to be performed manually when you need a new branch to be added to all repos in your conf.
+Eg: when a new Odoo version is released.
+
+Go to the conf repo on your file system and run this:
+
+    oca-repo-add-branch --conf-dir ./conf/ --branch 18.0
+
+Review, stage all the changes, commit and open a PR.
+
+You can prevent this tool to edit a repo by adding ``manual_branch_mgmt`` boolean flag to repo's conf.
 
 ## Licenses
 
