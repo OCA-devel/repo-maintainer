@@ -29,7 +29,9 @@ def manage(conf_dir, org, token):
 @click.command()
 @click.option("--conf-dir", required=True, help="Folder where configuration is stored")
 @click.option("--branch", required=True, help="New branch name to add")
-@click.option("--default", default=True, help="Set default branch as default.")
+@click.option(
+    "--default/--no-default", default=True, help="Set default branch as default."
+)
 def add_branch(conf_dir, branch, default=True):
     """Add a branch to all repositories in the configuration."""
     ConfFileManager(conf_dir).add_branch(branch, default=default)
